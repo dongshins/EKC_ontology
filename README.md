@@ -4,7 +4,7 @@ EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의
 
 The present specification is based on the document "[Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022)", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies.
 
-※ Protégé : Developed by the Stanford Center for Biomedical Informatics Research at the Stanford University School of Medicine.
+※ [Protégé](https://protege.stanford.edu) : Developed by the Stanford Center for Biomedical Informatics Research at the Stanford University School of Medicine.
 
 
 # License for this repository 
