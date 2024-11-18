@@ -1,0 +1,801 @@
+@prefix : <http://dh.aks.ac.kr/ontologies/ekc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://dh.aks.ac.kr/ontologies/ekc#> .
+
+<http://dh.aks.ac.kr/ontologies/ekc> rdf:type owl:Ontology ;
+                                      dc:creator "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
+                                                 "한국학중앙연구원 디지털인문학연구소"@ko ;
+                                      dc:description "EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마이다.(Encyves ≒ Encyclopedic Archives) 한국학중앙연구원 디지털인문학연구소에서 2016년에 처음 제정하였고(EKC 1.0/2016, EKC 1.1/2017), 매년 유관 분야 연구를 통해 확장해 가고 있다."@ko ;
+                                      dc:title "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary"@en ;
+                                      dcterms:issued "2017-03-29T18:44:00+09:00"^^xsd:dateTime ;
+                                      dcterms:modified "2024-11-17T09:04:14+09:00"^^xsd:dateTime ;
+                                      rdfs:comment "The present specification is based on the document \\\"Ontology:EKC 2022\\\", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies." ;
+                                      rdfs:seeAlso "https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty ;
+                 rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#A1
+:A1 rdf:type owl:ObjectProperty ,
+             owl:SymmetricProperty .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasAdoptedHeir
+:hasAdoptedHeir rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                owl:inverseOf :isAdoptedHeirOf ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasBrother
+:hasBrother rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            owl:inverseOf :isBrotherOf ;
+            rdfs:domain :Actor ;
+            rdfs:range :Actor .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasBrotherInLaw
+:hasBrotherInLaw rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasConcubine
+:hasConcubine rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ,
+                                 :isHusbandOf ;
+              owl:inverseOf :isConcubineOf ;
+              owl:propertyDisjointWith :hasWife .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasCousin
+:hasCousin rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           rdf:type owl:SymmetricProperty .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDaughter
+:hasDaughter rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             owl:inverseOf :isDaughterOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDaughterInLaw
+:hasDaughterInLaw rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDescendant
+:hasDescendant rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ;
+               owl:inverseOf :isDescendantOf ;
+               rdf:type owl:TransitiveProperty .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDisciple
+:hasDisciple rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasFather
+:hasFather rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ,
+                              :isDaughterOf ;
+           owl:inverseOf :isFatherOf ;
+           owl:propertyDisjointWith :hasMother .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasFatherInLaw
+:hasFatherInLaw rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasGrandDaughter
+:hasGrandDaughter rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasGrandson
+:hasGrandson rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasHusband
+:hasHusband rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            owl:inverseOf :isHusbandOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasMaster
+:hasMaster rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasMother
+:hasMother rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ,
+                              :isDaughterOf ;
+           owl:inverseOf :isMotherOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSister
+:hasSister rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSisterInLaw
+:hasSisterInLaw rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSon
+:hasSon rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSonInLaw
+:hasSonInLaw rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasWife
+:hasWife rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :A1 ,
+                            :isHusbandOf ;
+         owl:inverseOf :isWifeOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAdoptedHeirOf
+:isAdoptedHeirOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAffinalKinOf
+:isAffinalKinOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isBrotherOf
+:isBrotherOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isConcubineOf
+:isConcubineOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ,
+                                  :hasHusband ;
+               owl:propertyDisjointWith :isWifeOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDaughterOf
+:isDaughterOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDescendantOf
+:isDescendantOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdf:type owl:TransitiveProperty .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFatherOf
+:isFatherOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ,
+                               :hasDaughter ;
+            owl:propertyDisjointWith :isMotherOf .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFellowOf
+:isFellowOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isHusbandOf
+:isHusbandOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isLineageKinOf
+:isLineageKinOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMentionedBy
+:isMentionedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMotherOf
+:isMotherOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ,
+                               :hasDaughter .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isWifeOf
+:isWifeOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :A1 ,
+                             :hasHusband .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasOrdainedBy
+:wasOrdainedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+foaf:knows rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Actor
+:Actor rdf:type owl:Class ;
+       dc:description "Historical figures; Organizations as collective actors and institutions as operating entities"@en ,
+                      "역사적인 인물. 집단적 행위 주체로서의 단체, 운영주체로서의 기관"@ko ;
+       rdfs:label "Actor"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Architecture
+:Architecture rdf:type owl:Class ;
+              dc:description "Historic Buildings in a certain area and historically related structures"@en ,
+                             "특정 권역의 역사적인 건조물 및 주변의 유관한 건축/조형물"@ko ;
+              rdfs:label "Architecture"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Bibliography
+:Bibliography rdf:type owl:Class ;
+              dc:description "List of academic research materials"@en ,
+                             "학술적 연구 자료의 목록"@ko ;
+              rdfs:label "Bibliography"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Clothing
+:Clothing rdf:type owl:Class ;
+          dc:description "Costumes, components of costumes, or traditional ornaments"@en ,
+                         "역사적·문화적 복장과 복식 요소들"@ko ;
+          rdfs:label "Clothing"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Concept
+:Concept rdf:type owl:Class ;
+         dc:description "Terms and concepts necessary to explain institutions, rituals, customs, etc."@en ,
+                        "제도, 의례, 풍속 등을 설명하는 데 필요한 용어와 개념"@ko ;
+         rdfs:label "Concept"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Event
+:Event rdf:type owl:Class ;
+       dc:description "Events held in a certain area, ceremonies and events that reproduce them today"@en ,
+                      "특정 권역에서 일어난 사건, 의례 및 이를 재현하는 행사"@ko ;
+       rdfs:label "Event"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Food
+:Food rdf:type owl:Class ;
+      dc:description "Food, ingredients and table setting"@en ,
+                     "음식, 식재료와 상차림"@ko ;
+      rdfs:label "Food"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Heritage
+:Heritage rdf:type owl:Class ;
+          dc:description "Registration information of designated and registered cultural properties"@en ,
+                         "지정문화유산 및 등록문화유산 등록 정보"@ko ;
+          rdfs:label "Heritage"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Index
+:Index rdf:type owl:Class ;
+       dc:description "A list of nodes of similar character. Timeline, collection list, reference list, web resource list, etc."@en ,
+                      "유사한 성격의 노드들을 모아서 묶은 목록. 연표, 소장도서목록, 참고문헌목록, 웹자원목록 등"@ko ;
+       rdfs:label "Index"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Multimedia
+:Multimedia rdf:type owl:Class ;
+            dc:description "3D model of a building; 3D map indicating the location of a specific place; visual materials"@en ,
+                           "3D 모델, 특정 공간의 위치를 알리는 3차원 지도, 시각자료"@ko ;
+            rdfs:label "Multimedia"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Object
+:Object rdf:type owl:Class ;
+        dc:description "Items used in various ceremonies or events; Items or tools that show the culture of the time"@en ,
+                       "각종 의례/행사의 도구, 그 시대의 문화를 보이는 물품들"@ko ;
+        rdfs:label "Object"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Place
+:Place rdf:type owl:Class ;
+       dc:description "Places related to historical events or characters; Places where historical relics or artifacts are located"@en ,
+                      "역사적 배경(사건, 인물)과 관련이 있는 장소. 유물의 소장처"@ko ;
+       rdfs:label "Place"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Record
+:Record rdf:type owl:Class ;
+        dc:description "Records that serve as the source of knowledge such as books, photographs, drawings, and inscriptions"@en ,
+                       "문헌, 사진, 도면, 금석문 등 지식 데이터의 원천 자료가 되는 기록물"@ko ;
+        rdfs:label "Record"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Story
+:Story rdf:type owl:Class ;
+       dc:description "Description of historical knowledge that explains the background of discovering data nodes"@en ,
+                      "데이터 노드 발굴의 배경이 된 역사적 지식에 대한 서술"@ko ;
+       rdfs:label "Story"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Text
+:Text rdf:type owl:Class ;
+      dc:description "Text in the literature that functions as evidence of explanation"@en ,
+                     "설명의 증거 기능을 하는 문헌상의 텍스트"@ko ;
+      rdfs:label "Text"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#WebResource
+:WebResource rdf:type owl:Class ;
+             dc:description "Reference materials that can be accessed on the World Wide Web"@en ,
+                            "월드 와이드 웹에서 접근할 수 있는 참고 자료"@ko ;
+             rdfs:label "WebResource"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Work
+:Work rdf:type owl:Class ;
+      dc:description "Works of art such as literature, fine arts, music, dance, performance, etc."@en ,
+                     "문학, 미술, 음악, 연희, 무용 등의 문예 작품"@ko ;
+      rdfs:label "Work"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#개념용어
+:개념용어 rdf:type owl:Class ;
+      rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#건축
+:건축 rdf:type owl:Class ;
+    rdfs:subClassOf :Architecture .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#건축부품
+:건축부품 rdf:type owl:Class ;
+      rdfs:subClassOf :Architecture .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#고문헌
+:고문헌 rdf:type owl:Class ;
+     rdfs:subClassOf :Bibliography .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#고지명
+:고지명 rdf:type owl:Class ;
+     rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#관서
+:관서 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "관서"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#관직
+:관직 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#국가
+:국가 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "국가"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#국보
+:국보 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#그림
+:그림 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ,
+                    :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#근대문헌
+:근대문헌 rdf:type owl:Class ;
+      rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#근대유적지
+:근대유적지 rdf:type owl:Class ;
+       rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#금석문
+:금석문 rdf:type owl:Class ;
+     rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기관
+:기관 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "기관"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기념물
+:기념물 rdf:type owl:Class ;
+     rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기사
+:기사 rdf:type owl:Class ;
+    rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기장
+:기장 rdf:type owl:Class ;
+    rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#논문
+:논문 rdf:type owl:Class ;
+    rdfs:subClassOf :Bibliography .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#단체
+:단체 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "단체"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#단행본
+:단행본 rdf:type owl:Class ;
+     rdfs:subClassOf :Bibliography .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#도면
+:도면 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#동영상
+:동영상 rdf:type owl:Class ;
+     rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#등록문화재
+:등록문화재 rdf:type owl:Class ;
+       rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#무용
+:무용 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#무형
+:무형 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#문학
+:문학 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#문헌
+:문헌 rdf:type owl:Class ;
+    rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#물품
+:물품 rdf:type owl:Class ;
+    rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#뮤지컬
+:뮤지컬 rdf:type owl:Class ;
+     rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#미술
+:미술 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#번역문
+:번역문 rdf:type owl:Class ;
+     rdfs:subClassOf :Text .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#보물
+:보물 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#복식
+:복식 rdf:type owl:Class ;
+    rdfs:subClassOf :Clothing .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#복장
+:복장 rdf:type owl:Class ;
+    rdfs:subClassOf :Clothing .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#분류주제
+:분류주제 rdf:type owl:Class ;
+      rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사건
+:사건 rdf:type owl:Class ;
+    rdfs:subClassOf :Event .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사적
+:사적 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사진
+:사진 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#상차림
+:상차림 rdf:type owl:Class ;
+     rdfs:subClassOf :Food .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#소장처
+:소장처 rdf:type owl:Class ;
+     rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#스토리라인
+:스토리라인 rdf:type owl:Class ;
+       rdfs:subClassOf :Story ;
+       owl:disjointWith :에피소드 .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#시각자료
+:시각자료 rdf:type owl:Class ;
+      rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#시도문화재
+:시도문화재 rdf:type owl:Class ;
+       rdfs:subClassOf :Heritage .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#식재료
+:식재료 rdf:type owl:Class ;
+     rdfs:subClassOf :Food .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#에피소드
+:에피소드 rdf:type owl:Class ;
+      rdfs:subClassOf :Story .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#연극
+:연극 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#영화
+:영화 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#원문
+:원문 rdf:type owl:Class ;
+    rdfs:subClassOf :Text ,
+                    :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#웹자원색인
+:웹자원색인 rdf:type owl:Class ;
+       rdfs:subClassOf :Index .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#유적지
+:유적지 rdf:type owl:Class ;
+     rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#음식
+:음식 rdf:type owl:Class ;
+    rdfs:subClassOf :Food .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#음악
+:음악 rdf:type owl:Class ;
+    rdfs:subClassOf :Work .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#의례
+:의례 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#인물
+:인물 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#인물군
+:인물군 rdf:type owl:Class ;
+     rdfs:subClassOf :Actor .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#자연지명
+:자연지명 rdf:type owl:Class ;
+      rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#장소
+:장소 rdf:type owl:Class ;
+    rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#전시
+:전시 rdf:type owl:Class ;
+    rdfs:subClassOf :Event .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#제도
+:제도 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#제수
+:제수 rdf:type owl:Class ;
+    rdfs:subClassOf :Food .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#조형
+:조형 rdf:type owl:Class ;
+    rdfs:subClassOf :Architecture .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#지도
+:지도 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#직역
+:직역 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#참고
+:참고 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#참고문헌색인
+:참고문헌색인 rdf:type owl:Class ;
+        rdfs:subClassOf :Index .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#탑본
+:탑본 rdf:type owl:Class ;
+    rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#해설
+:해설 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#행사
+:행사 rdf:type owl:Class ;
+    rdfs:subClassOf :Event .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#행정지명
+:행정지명 rdf:type owl:Class ;
+      rdfs:subClassOf :Place .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#현대문헌
+:현대문헌 rdf:type owl:Class ;
+      rdfs:subClassOf :Record .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#현판
+:현판 rdf:type owl:Class ;
+    rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#호칭
+:호칭 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#화폐
+:화폐 rdf:type owl:Class ;
+    rdfs:subClassOf :Object .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_모델
+<http://dh.aks.ac.kr/ontologies/ekc#3D_모델> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Multimedia .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_지도
+<http://dh.aks.ac.kr/ontologies/ekc#3D_지도> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Multimedia .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#명문(銘文)
+<http://dh.aks.ac.kr/ontologies/ekc#명문(銘文)> rdf:type owl:Class ;
+                                            rdfs:subClassOf :Text .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+voaf:Vocabulary rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#
+: rdf:type owl:NamedIndividual ,
+           voaf:Vocabulary .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
