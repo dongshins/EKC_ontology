@@ -8,6 +8,8 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 
 ※ [Turtle draft for EKC Data Model](https://dh.aks.ac.kr/~dongshin/wiki/index.php/Turtle_Draft_for_EKC_Data_Model) : Wiki page since 2024-09-23 by Dong Shin SEO 
 
+※ EKC ontology using Protégé (this repository) : Since 2024-09-28 by Dong Shin SEO 
+
 ※ Advanced EKC ontology using Protégé : Separated as 'EKC_ontology_advanced' repository since 2024-11-23 by Dong Shin SEO 
 
 # License for this repository 
