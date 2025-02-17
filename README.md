@@ -24,4 +24,4 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
-※ [Creative Commons Licenses for GitHub Projects](https://github.com/santisoler/cc-licenses) 
+※ [Creative Commons Licenses for GitHub Projects](https://github.com/santisoler/cc-licenses) : Easy ways for applying Creative Commons Licenses on Github repositories through Markdown language by [Santiago Soler and contributors](https://github.com/santisoler/cc-licenses) 
