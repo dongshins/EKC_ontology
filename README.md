@@ -49,6 +49,19 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 - Version history: [version_history/](./version_history)  
 - Planned publication: to be linked once LOV registration is complete
 
+## Contributors
+
+The EKC Ontology was initially developed during collaborative efforts at the Academy of Korean Studies, under the guidance of Professor Hyeon KIM. The early modeling team included over ten researchers who contributed to the conceptual framework and design.
+
+Since its inception, the ontology has been improved and maintained through various projects in the field of digital humanities.
+
+The current version of the ontology—created in OWL using Protégé and serialized in Turtle format—was solely authored and structured by:
+
+**Dong Shin SEO**  
+Researcher, Center for Digital Humanities & Division of Information Development, Academy of Korean Studies  
+Email: oriental.neo@gmail.com
+
+
 ※ [Protégé](https://protege.stanford.edu) : Developed by the Stanford Center for Biomedical Informatics Research at the Stanford University School of Medicine.
 
 ※ [Turtle draft for EKC Data Model](https://dh.aks.ac.kr/~dongshin/wiki/index.php/Turtle_Draft_for_EKC_Data_Model) : Wiki page since 2024-09-23 by Dong Shin SEO 
