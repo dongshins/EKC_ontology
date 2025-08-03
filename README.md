@@ -38,6 +38,11 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 - Version history: EKC 1.0 → EKC 1.1 → EKC 2022 → EKC 2022.α25080301
 - License: Creative Commons Attribution‑ShareAlike 4.0 International (CC BY‑SA 4.0)
 
+## Links
+
+- Ontology file: [ekc_ontology.ttl](./ekc_ontology.ttl)  
+- Version history: [version_history/](./version_history)  
+- Planned publication: to be linked once LOV registration is complete
 
 ※ [Protégé](https://protege.stanford.edu) : Developed by the Stanford Center for Biomedical Informatics Research at the Stanford University School of Medicine.
 
