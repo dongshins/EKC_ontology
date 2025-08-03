@@ -971,17 +971,10 @@ A는 B로 운반되었다""" .
 ###  http://dh.aks.ac.kr/ontologies/ekc#isAwarded
 :isAwarded rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :E3 ;
-           owl:inverseOf :isAwardedTo ;
            rdfs:domain :Actor ;
            dc:description "~을 상으로 받다"@ko ;
            rdfs:label "isAwarded"@en ;
            skos:scopeNote "relation attribute : 수량(quantity. 예: 1필)" .
-
-
-###  http://dh.aks.ac.kr/ontologies/ekc#isAwardedTo
-:isAwardedTo rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :E3 ;
-             rdfs:label "isAwardedTo"@en .
 
 
 ###  http://dh.aks.ac.kr/ontologies/ekc#isBirthPlaceOf
@@ -2184,18 +2177,6 @@ foaf:member rdf:type owl:ObjectProperty ;
             skos:example "집현전 - 정인지"@ko ;
             skos:note "조직-구성원 관계"@ko ;
             skos:scopeNote "Domain : Agent(Actor의 subclasses 중 기관, 단체 등)" .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://dh.aks.ac.kr/ontologies/ekc#quantity
-:quantity rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "quantity"@en ;
-          skos:example "1필, 5개"@ko ;
-          skos:note "수량"@ko .
 
 
 #################################################################
