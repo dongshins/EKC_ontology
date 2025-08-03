@@ -55,7 +55,7 @@ The EKC Ontology was initially developed during collaborative efforts at the Aca
 
 Since its inception, the ontology has been improved and maintained through various projects in the field of digital humanities.
 
-The current version of the ontology—created in OWL using Protégé and serialized in Turtle format—was authored and structured by:
+The version of the ontology created in OWL using Protégé and serialized in Turtle format was authored and structured by:
 
 **Dong Shin SEO**  
 Researcher, Center for Digital Humanities, Academy of Korean Studies  
