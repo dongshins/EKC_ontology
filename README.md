@@ -58,7 +58,8 @@ Since its inception, the ontology has been improved and maintained through vario
 The current version of the ontology—created in OWL using Protégé and serialized in Turtle format—was solely authored and structured by:
 
 **Dong Shin SEO**  
-Researcher, Center for Digital Humanities & Division of Information Development, Academy of Korean Studies  
+Researcher, Center for Digital Humanities, Academy of Korean Studies  
+IT Expert Adviser, Division of Information Development, Academy of Korean Studies  
 Email: oriental.neo@gmail.com
 
 
