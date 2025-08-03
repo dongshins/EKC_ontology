@@ -51,7 +51,7 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 
 ## Contributors
 
-The EKC Ontology was initially developed during collaborative efforts at the Academy of Korean Studies, under the guidance of Professor **Hyeon KIM**. The early modeling team included over ten researchers who contributed to the conceptual framework and design.
+The EKC Ontology was initially developed during collaborative efforts at the Academy of Korean Studies, under the guidance of **Professor Hyeon KIM**. The early modeling team included over ten researchers who contributed to the conceptual framework and design.
 
 Since its inception, the ontology has been improved and maintained through various projects in the field of digital humanities.
 
