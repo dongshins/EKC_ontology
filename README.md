@@ -47,7 +47,7 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 
 - Ontology file: [ekc_ontology.ttl](./ekc_ontology.ttl)  
 - Version history: [version_history/](./version_history)  
-- Planned publication: to be linked once LOV registration is complete
+- Publication: [EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)](https://lov.linkeddata.es/dataset/lov/vocabs/ekc)(LOV registration)
 
 ## Contributors
 
