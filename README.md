@@ -51,11 +51,11 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 
 ## Contributors
 
-The EKC Ontology was initially developed during collaborative efforts at the Academy of Korean Studies, under the guidance of **Professor Hyeon KIM**. The early modeling team included over ten researchers who contributed to the conceptual framework and design.
+The EKC Ontology was initially developed during collaborative efforts at the Academy of Korean Studies, under the guidance of **Professor Hyeon KIM**. The early modeling team included **over ten researchers** who contributed to the conceptual framework and design.
 
-Since its inception, the ontology has been improved and maintained through various projects in the field of digital humanities.
+Since its inception, the ontology has been improved and maintained **through various projects** in the field of digital humanities.
 
-The version of the ontology created in OWL using Protégé and serialized in Turtle format was solely authored and structured by:
+The version of the ontology **created in OWL using Protégé** and **serialized in Turtle format** was **solely** authored and structured by:
 
 **Dong Shin SEO**  
 Researcher, Center for Digital Humanities, Academy of Korean Studies  
