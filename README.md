@@ -63,7 +63,7 @@ IT Expert Adviser, Division of Information Development, Academy of Korean Studie
 Email: oriental.neo@gmail.com
 
 
-※ [Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022) : Developed by **the Center for Digital Humanities** in **the Academy of Korean Studies** since 2016.
+※ [Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022) : Developed since 2016 by **the Center for Digital Humanities** in **the Academy of Korean Studies**.
 
 ※ [Protégé](https://protege.stanford.edu) : Developed by the Stanford Center for Biomedical Informatics Research at the Stanford University School of Medicine.
 
