@@ -51,7 +51,7 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 
 ## Contributors
 
-- 김현, 서동신, 강혜원, 류인태, 서소리, 김사현, 김바로, 김지선, 장동룡, 김누리, 김미정, 이혜영, 차서연, 장원석, 이창섭, 김선미, 김현규, 최한샘, 김아람 @ko
+- 김현, 서동신, 강혜원, 류인태, 서소리, 김사현, 김바로, 김지선, 장동룡, 김누리, 김미정, 이혜영, 차서연, 장원석, 이창섭, 김선미, 김현규, 최한샘, 김아람, 김병준, 김현종 @ko
 
 The EKC Ontology was initially developed during **collaborative efforts** at **the Academy of Korean Studies**, under the guidance of **Professor Hyeon KIM**. The early modeling team included **over ten researchers** (including Dong Shin SEO below) who contributed to the conceptual framework and design.
 
