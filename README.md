@@ -61,8 +61,11 @@ The version of the ontology **created in OWL using Protégé** and **serialized 
 
 **Dong Shin SEO**  
 Researcher, Center for Digital Humanities, Academy of Korean Studies  
+
 IT Expert Adviser, Division of Information Development, Academy of Korean Studies
+
 Wikidata: [Q52661852](https://www.wikidata.org/wiki/Q52661852)
+
 Email: oriental.neo@gmail.com
 
 
