@@ -60,13 +60,10 @@ Since its inception, the ontology has been improved and maintained **through var
 The version of the ontology **created in OWL using Protégé** and **serialized in Turtle format** was solely composed and maintained by:
 
 **Dong Shin SEO**  
-Researcher, Center for Digital Humanities, Academy of Korean Studies  
-
-IT Expert Adviser, Division of Information Development, Academy of Korean Studies
-
-Wikidata: [Q52661852](https://www.wikidata.org/wiki/Q52661852)
-
-Email: oriental.neo@gmail.com
+- Researcher, Center for Digital Humanities, Academy of Korean Studies  
+- IT Expert Adviser, Division of Information Development, Academy of Korean Studies
+- Wikidata: [Q52661852](https://www.wikidata.org/wiki/Q52661852)
+- Email: oriental.neo@gmail.com
 
 
 ※ [Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022) : Developed since 2016 by **the Center for Digital Humanities** in **the Academy of Korean Studies**.
