@@ -1,6 +1,6 @@
 # Ontology using Protégé : EKC Data Model 
 
-The EKC Ontology is a domain-specific vocabulary for encoding relationships among historical facts, sources, persons, and works in traditional Korean culture. 
+The EKC Ontology is a domain-specific vocabulary for modeling relationships among historical facts, source documents, persons, and locations in Korean cultural heritage. Initially developed during the Encyclopedic Archives of Korean Culture digitization project at the Academy of Korean Studies and refined through various digital humanities projects.
 
 **Developed** since 2016 under [**the Center for Digital Humanities** in **the Academy of Korean Studies**](https://dh.aks.ac.kr/).
 
