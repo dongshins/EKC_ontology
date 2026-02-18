@@ -21,8 +21,6 @@ The present specification is based on the document "[Ontology:EKC 2022](https://
 **EKC 2025 (v2025.0.0)**  
 👉 https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0
 
----
-
 ## Archived Versions
 
 ### EKC 2022.α2507
