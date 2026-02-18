@@ -17,7 +17,6 @@ EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의
 The present specification is based on the document "[Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022)", originally led by [**Hyeon KIM (Professor, AKS)**](http://www.xuanflute.com/) in the Center for Digital Humanities at the Academy of Korean Studies.
 
 ## Latest Stable Release
-
 **EKC 2025 (v2025.0.0)**  
 👉 https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0
 
