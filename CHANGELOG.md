@@ -1,14 +1,29 @@
 # Changelog
 
-## EKC 2025 (v2025.0.0) — 2026-02-18
-
 All notable changes to this project will be documented in this file.
 
 This project follows:
-- Semantic Versioning (SemVer) for releases (e.g., v2025.0.0)
 - Year label for scholarly communication (e.g., "EKC 2025")
-
+- Semantic Versioning (SemVer) for releases (e.g., v2025.0.0)
+<!--  
 ## [Unreleased]
+### Breaking Changes
+- Renamed terms (IRIs changed):
+  - `ekc:Scholar` → `ekc:Researcher`
+  - `ekc:hasPeriod` → `ekc:hasTimeSpan`
+- Restructured hierarchy:
+  - `ekc:Event` subclasses reorganized (some moved under new intermediate classes).
+- Domain/Range tightened for several properties (may break permissive legacy data).
+
+### Migration Guide
+If your dataset uses EKC 2022.α2507, apply the following mapping:
+
+| EKC 2022.α2507 | EKC 2025 | Action |
+|---|---|---|
+| `ekc:Scholar` | `ekc:Researcher` | replace IRI |
+| `ekc:hasPeriod` | `ekc:hasTimeSpan` | replace property |
+| `ekc:hasAffiliation` (range: Literal) | `ekc:hasAffiliation` (range: Organization) | refactor values |
+
 ### Added
 - (planned) Alignment to additional external vocabularies.
 ### Changed
@@ -21,8 +36,28 @@ This project follows:
 - (planned) Validation fixes based on SHACL checks.
 
 ---
+-->
+## EKC 2025 [v2025.0.0] — 2026-02-18 (Major Release)
+### Breaking Changes
+- Renamed terms (IRIs changed):
+  - `ekc:Scholar` → `ekc:Researcher`
+  - `ekc:hasPeriod` → `ekc:hasTimeSpan`
+- Restructured hierarchy:
+  - `ekc:Event` subclasses reorganized (some moved under new intermediate classes).
+- Domain/Range tightened for several properties (may break permissive legacy data).
 
-## [v2025.0.0] - 2025-09-18 — EKC 2025 (Major Release)
+### Migration Guide
+If your dataset uses EKC 2022.α2507, apply the following mapping:
+
+| EKC 2022.α2507 | EKC 2025 | Action |
+|---|---|---|
+| `ekc:Scholar` | `ekc:Researcher` | replace IRI |
+| `ekc:hasPeriod` | `ekc:hasTimeSpan` | replace property |
+| `ekc:hasAffiliation` (range: Literal) | `ekc:hasAffiliation` (range: Organization) | refactor values |
+
+### Added
+- SHACL constraints for `ekc:Person`, `ekc:Work`, `ekc:Event`.
+- Example
 ### Added
 - SHACL shapes: `ekc-shapes.ttl` for core constraints.
 - Wikidata alignment annotations (`schema:sameAs` / `wdt:*` mapping notes).
@@ -54,7 +89,7 @@ This project follows:
 
 ---
 
-## [v2022-alpha2507] - 2025-08-03 — EKC 2022.α2507 (Archived)
+## EKC 2022.α2507 [v2022-alpha2507] - 2025-08-03 (Archived)
 ### Notes
 - This version is archived and no longer maintained.
 - Preserved for reproducibility and stable scholarly citation.
