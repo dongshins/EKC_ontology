@@ -10,11 +10,16 @@ Prefix: `ekc`
 
 License: CC BY-SA 4.0
 
-Current version: EKC 2025 
+Current version: EKC 2025 (v2025.0.0)
 
 EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마입니다.(Encyves ≒ Encyclopedic Archives) [**한국학중앙연구원 디지털인문학연구소**](https://dh.aks.ac.kr/)에서 2016년에 처음 제정하였고([EKC 1.0/2016, EKC 1.1/2027](http://dh.aks.ac.kr/Encyves/wiki/index.php/EKC_Data_Model-Draft_1.1)), 매년 유관 분야 연구를 통해 확장해 가고 있습니다. @ko
 
 The present specification is based on the document "[Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022)", originally led by [**Hyeon KIM (Professor, AKS)**](http://www.xuanflute.com/) in the Center for Digital Humanities at the Academy of Korean Studies.
+
+## Latest Stable Release
+
+**EKC 2025 (v2025.0.0)**  
+👉 https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0
 
 ## Key Classes
 
