@@ -31,7 +31,7 @@
                                                    "https://github.com/dongshins/EKC_ontology" ,
                                                    "https://github.com/dongshins/EKC_ontology_advanced" ;
                                       owl:priorVersion <https://dh.aks.ac.kr/ontologies/ekc/2022-alpha2507> ;
-                                      owl:versionInfo "EKC 2025 (v2025.0.0)"@en .
+                                      owl:versionInfo "EKC 2025 [v2025.0.0]"@en .
 
 #################################################################
 #    Annotation properties
