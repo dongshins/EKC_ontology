@@ -51,12 +51,15 @@ and formalizes explicit ontology version metadata for reproducible reuse.
 - New documentation: `docs/migration-2022a2507-to-2025.md`.
 -->
 ### Changed
-- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
+- Publication metadata improved (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
+- Packaging/documentation improved to support stable scholarly citation and reproducibility.
 <!--
 - Reorganized class hierarchy for `ekc:Event` and `ekc:Agent`.
-- Normalized naming conventions (camelCase for properties; PascalCase for classes).
--->
+//- Normalized naming conventions (camelCase for properties; PascalCase for classes).
+//- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
 
+//- Publication metadata updated (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
+-->
 ### Deprecated
 - `ekc:hasPeriod` (use `ekc:hasTimeSpan` instead).
 - `ekc:Scholar` (use `ekc:Researcher` instead).
