@@ -38,23 +38,6 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 ---
 -->
 ## EKC 2025 [v2025.0.0] — 2026-02-18 (Major Release)
-### Breaking Changes
-- Renamed terms (IRIs changed):
-  - `ekc:Scholar` → `ekc:Researcher`
-  - `ekc:hasPeriod` → `ekc:hasTimeSpan`
-- Restructured hierarchy:
-  - `ekc:Event` subclasses reorganized (some moved under new intermediate classes).
-- Domain/Range tightened for several properties (may break permissive legacy data).
-
-### Migration Guide
-If your dataset uses EKC 2022.α2507, apply the following mapping:
-
-| EKC 2022.α2507 | EKC 2025 | Action |
-|---|---|---|
-| `ekc:Scholar` | `ekc:Researcher` | replace IRI |
-| `ekc:hasPeriod` | `ekc:hasTimeSpan` | replace property |
-| `ekc:hasAffiliation` (range: Literal) | `ekc:hasAffiliation` (range: Organization) | refactor values |
-
 ### Added
 - SHACL constraints for `ekc:Person`, `ekc:Work`, `ekc:Event`.
 - Example
