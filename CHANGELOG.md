@@ -38,19 +38,24 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 ---
 -->
 ## EKC 2025 [v2025.0.0] — 2026-02-18 (Major Release)
-### Added
-- SHACL constraints for `ekc:Person`, `ekc:Work`, `ekc:Event`.
-- Example
+
+### Overview
+EKC 2025 completes a versioned, citable release workflow for the EKC ontology.
+It builds on the standards-based RDF/OWL distribution and LOV registration milestone established in EKC 2022.α2507,
+and formalizes explicit ontology version metadata for reproducible reuse.
+<!--
 ### Added
 - SHACL shapes: `ekc-shapes.ttl` for core constraints.
 - Wikidata alignment annotations (`schema:sameAs` / `wdt:*` mapping notes).
 - Multilingual labels (ko/en) expanded for key classes and properties.
 - New documentation: `docs/migration-2022a2507-to-2025.md`.
-
+-->
 ### Changed
+- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
+<!--
 - Reorganized class hierarchy for `ekc:Event` and `ekc:Agent`.
 - Normalized naming conventions (camelCase for properties; PascalCase for classes).
-- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
+-->
 
 ### Deprecated
 - `ekc:hasPeriod` (use `ekc:hasTimeSpan` instead).
