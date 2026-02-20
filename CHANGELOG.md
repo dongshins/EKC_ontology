@@ -59,25 +59,25 @@ and formalizes explicit ontology version metadata for reproducible reuse.
 //- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
 
 //- Publication metadata updated (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
--->
+--><!--
 ### Deprecated
 - `ekc:hasPeriod` (use `ekc:hasTimeSpan` instead).
 - `ekc:Scholar` (use `ekc:Researcher` instead).
-
+--><!--
 ### Removed
 - (none)
-
+--><!--
 ### Fixed
 - Cardinality inconsistencies detected by SHACL validation.
 - Typos in rdfs:label / skos:definition (ko/en).
-
+--><!--
 ### Security
 - (none)
-
+--><!--
 ### Migration Notes
 - See `docs/migration-2022a2507-to-2025.md`.
 - Legacy terms remain resolvable for compatibility, but are not maintained.
-
+-->
 ---
 
 ## EKC 2022.α2507 [v2022-alpha2507] - 2025-08-03 (Archived)
