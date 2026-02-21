@@ -42,7 +42,7 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 ### Overview
 EKC 2025 completes a versioned, citable release workflow for the EKC ontology.
 It builds on the standards-based RDF/OWL distribution and LOV registration milestone established in EKC 2022.α2507,
-and formalizes explicit ontology version metadata for reproducible reuse.
+and formalizes explicit ontology version metadata (e.g., owl:versionIRI) for reproducible reuse.
 <!--
 ### Added
 - SHACL shapes: `ekc-shapes.ttl` for core constraints.
@@ -86,10 +86,10 @@ and formalizes explicit ontology version metadata for reproducible reuse.
 -->
 ---
 
-## EKC 2022.α2507 [v2022-alpha2507] - 2025-08-03 (Archived)
+## EKC 2022.α2507 [v2022-alpha2507] — 2025-07-27 (Archived)
 
 ### Major Publication & Distribution Changes
-- **Wiki → standards-based artifacts:** Consolidated the previously wiki-style EKC ontology documentation into machine-readable OWL/RDF deliverables (e.g., Turtle), composed and maintained in Protégé.
+- **Wiki → standards-based artifacts:** Consolidated the previously wiki-style EKC ontology documentation into machine-readable OWL/RDF deliverables (e.g., Turtle), authored and maintained in Protégé.
 - **Korean Studies milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** (added 2025-08-03), improving global discoverability and reuse in the Linked Data ecosystem.
 - **Community note:** To the best of our knowledge, EKC is among the earliest Korean Studies–focused vocabularies registered in LOV.
 <!-- - **Registry milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** to improve global discoverability and reuse in the Linked Data ecosystem.--> 
@@ -98,8 +98,10 @@ and formalizes explicit ontology version metadata for reproducible reuse.
 ### References
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
+- Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2022-alpha2507
 
 ### Notes
 - This version is archived and no longer maintained.
+- The label "EKC 2022.α2507" denotes the 2022-series snapshot; the GitHub archiving/release record was created on 2025-07-27.
 - Preserved for reproducibility, legacy dataset compatibility, and stable scholarly citation.
 <!-- - Preserved for reproducibility and stable scholarly citation. --> 
