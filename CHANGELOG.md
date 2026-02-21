@@ -87,6 +87,19 @@ and formalizes explicit ontology version metadata for reproducible reuse.
 ---
 
 ## EKC 2022.α2507 [v2022-alpha2507] - 2025-08-03 (Archived)
+
+### Major Publication & Distribution Changes
+- **Wiki → standards-based artifacts:** Consolidated the previously wiki-style EKC ontology documentation into machine-readable OWL/RDF deliverables (e.g., Turtle), composed and maintained in Protégé.
+- **Korean Studies milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** (added 2025-08-03), improving global discoverability and reuse in the Linked Data ecosystem.
+- **Community note:** To the best of our knowledge, EKC is among the earliest Korean Studies–focused vocabularies registered in LOV.
+<!-- - **Registry milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** to improve global discoverability and reuse in the Linked Data ecosystem.--> 
+<!-- - **Korean Studies milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** (added 2025-08-03), improving global discoverability and reuse.--> 
+<!-- - **Community note:** (To our knowledge) among the earliest LOV registrations of a Korean Studies–focused vocabulary.-->
+### References
+- Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
+- LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
+
 ### Notes
 - This version is archived and no longer maintained.
-- Preserved for reproducibility and stable scholarly citation.
+- Preserved for reproducibility, legacy dataset compatibility, and stable scholarly citation.
+<!-- - Preserved for reproducibility and stable scholarly citation. --> 
