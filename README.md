@@ -53,7 +53,7 @@ legacy dataset compatibility, and stable scholarly citation.
 
 - Format: Turtle (.ttl), OWL 2
 - Accessible at: raw URL
-- Version history: EKC 1.0 → EKC 1.1 → EKC 2022 → EKC 2022.α2507 → EKC 2025 
+- Version history: EKC 1.0 → EKC 1.1 → EKC 2022 → EKC 2022.α2507 → EKC 2022.α25080301 → EKC 2025 
 - License: Creative Commons Attribution‑ShareAlike 4.0 International (CC BY‑SA 4.0)
 
 ## Links
