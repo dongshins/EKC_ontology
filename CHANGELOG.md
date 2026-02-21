@@ -42,7 +42,7 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 ### Overview
 EKC 2025 completes a versioned, citable release workflow for the EKC ontology.
 It builds on the standards-based RDF/OWL distribution and LOV registration milestone established in EKC 2022.α2507,
-and formalizes explicit ontology version metadata (e.g., owl:versionIRI) for reproducible reuse.
+and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for reproducible reuse.
 <!--
 ### Added
 - SHACL shapes: `ekc-shapes.ttl` for core constraints.
