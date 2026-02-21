@@ -102,6 +102,8 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 ### References
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
+
+### Links
 - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2022-alpha2507
 
 ### Notes
