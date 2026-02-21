@@ -84,6 +84,10 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - See `docs/migration-2022a2507-to-2025.md`.
 - Legacy terms remain resolvable for compatibility, but are not maintained.
 -->
+### Links
+- Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0
+- Compare: https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0
+
 ---
 
 ## EKC 2022.α2507 [v2022-alpha2507] — 2025-07-27 (Archived)
