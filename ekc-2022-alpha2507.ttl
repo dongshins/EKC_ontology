@@ -1,0 +1,2777 @@
+@prefix : <http://dh.aks.ac.kr/ontologies/ekc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://dh.aks.ac.kr/ontologies/ekc#> .
+
+<http://dh.aks.ac.kr/ontologies/ekc> rdf:type owl:Ontology ;
+                                      dc:creator "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
+                                                 "한국학중앙연구원 디지털인문학연구소"@ko ;
+                                      dc:description "EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마이다.(Encyves ≒ Encyclopedic Archives) 한국학중앙연구원 디지털인문학연구소에서 2016년에 처음 제정하였고(EKC 1.0/2016, EKC 1.1/2017), 매년 유관 분야 연구를 통해 확장해 가고 있다."@ko ;
+                                      dc:title "EKC (Encyclopedic Archives of Korean Culture) Data Model vocabulary"@en ;
+                                      dcterms:issued "2017-03-29T18:44:00+09:00"^^xsd:dateTime ;
+                                      dcterms:modified "2025-07-27T06:50:09+09:00"^^xsd:dateTime ;
+                                      rdfs:comment "The present specification is based on the document \\\"Ontology:EKC 2022\\\", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies." ;
+                                      rdfs:seeAlso "https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022" ,
+                                                   "https://github.com/dongshins/EKC_ontology" ,
+                                                   "https://github.com/dongshins/EKC_ontology_advanced" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf skos:note .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#A1
+:A1 rdf:type owl:ObjectProperty ;
+    rdfs:label "A1"@en ;
+    skos:definition "인적 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#A2
+:A2 rdf:type owl:ObjectProperty ;
+    rdfs:label "A2"@en ;
+    skos:definition "문헌/작품/사건의 역할자"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#A3
+:A3 rdf:type owl:ObjectProperty ;
+    rdfs:label "A3"@en ;
+    skos:definition "인물과 기관/단체의 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#A4
+:A4 rdf:type owl:ObjectProperty ;
+    rdfs:label "A4"@en ;
+    skos:definition "관직 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#AR
+:AR rdf:type owl:ObjectProperty ;
+    rdfs:label "AR"@en ;
+    skos:definition "건조물 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#CL
+:CL rdf:type owl:ObjectProperty ;
+    rdfs:label "CL"@en ;
+    skos:definition "복식 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#CO
+:CO rdf:type owl:ObjectProperty ;
+    rdfs:label "CO"@en ;
+    skos:definition "개념적/포괄적 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#E1
+:E1 rdf:type owl:ObjectProperty ;
+    rdfs:label "E1"@en ;
+    skos:definition "이벤트 관련 관계: 사건"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#E2
+:E2 rdf:type owl:ObjectProperty ;
+    rdfs:label "E2"@en ;
+    skos:definition "이벤트 관련 관계: 행사"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#E3
+:E3 rdf:type owl:ObjectProperty ;
+    rdfs:label "E3"@en ;
+    skos:definition "이벤트 관련 관계: 공연"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#E4
+:E4 rdf:type owl:ObjectProperty ;
+    rdfs:label "E4"@en ;
+    skos:definition "이벤트 관련 관계: 전시"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#FO
+:FO rdf:type owl:ObjectProperty ;
+    rdfs:label "FO"@en ;
+    skos:definition "음식 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#HR
+:HR rdf:type owl:ObjectProperty ;
+    rdfs:label "HR"@en ;
+    skos:definition "문화재 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#NM
+:NM rdf:type owl:ObjectProperty ;
+    rdfs:label "NM"@en ;
+    skos:definition "이름 사이의 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#OB
+:OB rdf:type owl:ObjectProperty ;
+    rdfs:label "OB"@en ;
+    skos:definition "물품 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#P1
+:P1 rdf:type owl:ObjectProperty ;
+    rdfs:label "P1"@en ;
+    skos:definition "장소를 설명하는 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#P2
+:P2 rdf:type owl:ObjectProperty ;
+    rdfs:label "P2"@en ;
+    skos:definition "장소가 목적어인 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#RE
+:RE rdf:type owl:ObjectProperty ;
+    rdfs:label "RE"@en ;
+    skos:definition "기록물/유물 관련 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#ST
+:ST rdf:type owl:ObjectProperty ;
+    rdfs:label "ST"@en ;
+    skos:definition "스토리텔링 구성을 지시하는 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#TM
+:TM rdf:type owl:ObjectProperty ;
+    rdfs:label "TM"@en ;
+    skos:definition "연표의 구성을 지시하는 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#XR
+:XR rdf:type owl:ObjectProperty ;
+    rdfs:label "XR"@en ;
+    skos:definition "참고자료를 지시하는 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#administrates
+:administrates rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E2 ;
+               owl:inverseOf :isAdministratedBy ;
+               rdfs:domain :Actor ;
+               rdfs:range :Event ;
+               dc:description "~를 주관하다"@ko ;
+               rdfs:label "administrates"@en ;
+               skos:example "가례도감 - 가례"@ko ;
+               skos:note "의례·제도에서의 주관행위"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#annotator
+:annotator rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A2 ;
+           owl:inverseOf :isAnnotatorOf ;
+           rdfs:domain :Record ;
+           rdfs:range :Actor ;
+           dc:description "주석가는 ~이다"@ko ;
+           rdfs:label "annotator"@en ;
+           skos:example "용비어천가 - 성삼문"@ko ;
+           skos:note "주석자"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#appearsIn
+:appearsIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :E3 ;
+           rdfs:domain :Actor ;
+           rdfs:range :Concept ;
+           dc:description "(작품, 공연) ~에 출연하다"@ko ;
+           rdfs:label "appearsIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#archiveHolding
+:archiveHolding rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :XR ;
+                dc:description "아카이브 소장 목록(자료)는 ~이다 ※ 목적어는 아카이브의 소장품(소장도서) 카타로그"@ko ;
+                rdfs:label "archiveHolding"@en ;
+                skos:scopeNote "Range : Index/WebResource" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#bibliography
+:bibliography rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :XR ;
+              dc:description "참고문헌 목록은 ~이다 ※ 목적어는 참고문헌 색인(bib-XXXX) 노드" ;
+              rdfs:label "bibliography"@en ;
+              skos:scopeNote "Range : Index/Bibliography" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#calligrapher
+:calligrapher rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A2 ;
+              owl:inverseOf :isCalligrapherOf ;
+              rdfs:domain :Record ;
+              rdfs:range :Actor ;
+              dc:description "(금석문의) 글씨 쓴 이는 ~이다"@ko ;
+              skos:example "김원(신라) - 장흥 보림사 보조선사탑비"@ko ;
+              skos:note "글씨 쓴 사람. 비문/편액/제액 글씨 쓴 사람."@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#commemorates
+:commemorates rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :OB ;
+              rdfs:range :Event ;
+              dc:description "~를 기념하다"@ko ;
+              rdfs:label "commemorates"@en ;
+              skos:note "A는 B를 기념하여 만들어졌다" ;
+              skos:scopeNote "Domain : Object/Event/Record" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#constructor
+:constructor rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :AR ;
+             owl:inverseOf :isConstructorOf ;
+             rdfs:domain :Architecture ;
+             rdfs:range :Actor ;
+             dc:description "건축가는 ~이다"@ko ;
+             rdfs:label "constructor"@en ;
+             skos:example "소양강댐 - 현대건설"@ko ;
+             skos:note "건축을 지휘"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#cooks
+:cooks rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :FO ;
+       rdfs:domain :Actor ;
+       rdfs:range :Food ;
+       dc:description "음식 ~을 조리한다"@ko ;
+       rdfs:label "cooks"@en ;
+       skos:scopeNote "Domain : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#creatorPresumed
+:creatorPresumed rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A2 ;
+                 rdfs:range :Actor ;
+                 dc:description "(문헌/작품의) 작가는 ~라고 알려져 있다"@ko ;
+                 rdfs:label "creatorPresumed"@en ;
+                 skos:note "A의 작가는 B라고 알려져 있다" ;
+                 skos:scopeNote "Domain : Record/Object" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#curates
+:curates rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :E4 ;
+         rdfs:domain :Event ;
+         dc:description "~를 전시(큐레이션)하다"@ko ;
+         rdfs:label "curates"@en ;
+         skos:scopeNote "Range : Object/Record/Event" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#depicts
+:depicts rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :RE ;
+         owl:inverseOf :isDepictedIn ;
+         dc:description "~를 묘사하다"@ko ;
+         rdfs:label "depicts"@en ;
+         skos:example "고산구곡도설 - 고산구곡도"@ko ;
+         skos:note "A가 묘사하는 주된 대상이 B이다" ;
+         skos:scopeNote "Domain : Object/Record" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#documents
+:documents rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :RE ;
+           owl:inverseOf :isDocumentedIn ;
+           rdfs:domain :Record ;
+           rdfs:range :Event ;
+           dc:description "~를 문서화하다"@ko ;
+           rdfs:label "documents"@en ;
+           skos:example "영조정순왕후가례도감의궤 - 영조-정순왕후_가례"@ko ;
+           skos:note "A:기록물(예:의궤), B: 기록되는 대상(예:의례)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#doner
+:doner rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :A2 ;
+       rdfs:range :Actor ;
+       dc:description "(유물의) 기증자는 ~이다"@ko ;
+       rdfs:label "doner"@en ;
+       skos:scopeNote "Domain : Record/Object" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#editor
+:editor rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :A2 ;
+        rdfs:domain :Record ;
+        rdfs:range :Actor ;
+        dc:description "편집자는 ~이다"@ko ;
+        rdfs:label "editor"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#enshrines
+:enshrines rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :P1 ;
+           owl:inverseOf :isEnshrinedIn ;
+           dc:description "~를 제향하다"@ko ;
+           rdfs:label "enshrines"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#founder
+:founder rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :AR ;
+         owl:inverseOf :isFounderOf ;
+         rdfs:range :Actor ;
+         dc:description "설립자는 ~이다"@ko ;
+         rdfs:label "founder"@en ;
+         skos:example "현대미술가협회 - 하인두"@ko ;
+         skos:note "기관/단체/장소 설립자. 권위로써 무엇을 만들도록 함."@ko ;
+         skos:scopeNote "Domain : Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#goesWith
+:goesWith rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :OB ;
+          rdfs:domain :Object ;
+          rdfs:range :Object ;
+          dc:description "~를 수반하다"@ko ;
+          rdfs:label "goesWith"@en ;
+          skos:example "외궤 - 내함"@ko ;
+          skos:note """의식에서 물품 간의 수반 관계
+A는 B와 함께 착용하였다/사용되었다
+A는 B에 올려졌다
+A는 B를 담는다/감싼다
+A는 B로 운반되었다""" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasAdoptedHeir
+:hasAdoptedHeir rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                owl:inverseOf :isAdoptedHeirOf ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "양자 ~를 두었다"@ko ;
+                rdfs:label "hasAdoptedHeir"@en ;
+                skos:example "윤이석 - 윤두서"@ko ;
+                skos:note "양자(가계상속 목적)"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasAffiliation
+:hasAffiliation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A3 ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "~에 소속하다"@ko ;
+                rdfs:label "hasAffiliation"@en ;
+                skos:note "A는 B 소속이다" ;
+                skos:scopeNote "Range : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasAppointee
+:hasAppointee rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A4 ;
+              rdfs:domain :Record ;
+              rdfs:range :Actor ;
+              dc:description "(임명장에 기록된) 피임자는 ~이다"@ko ;
+              rdfs:label "hasAppointee"@en ;
+              skos:note "A(관직, 타이틀)의 피임자는 B이다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasAsset
+:hasAsset rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :HR ;
+          rdfs:domain :Place ;
+          dc:description "(상위 문화재가) 개별 문화재 ~을 가지고 있다"@ko ;
+          rdfs:label "hasAsset"@en ;
+          skos:note "A(문화유산 도메인)는 B(개별 문화유산)를 가지고 있다" ;
+          skos:scopeNote "Range : Architecture/Object/Record" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasBranchTemple
+:hasBranchTemple rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :HR ;
+                 rdfs:domain :Place ;
+                 rdfs:range :Place ;
+                 dc:description "(사찰 본사에) 말사 ~가 있다"@ko ;
+                 rdfs:label "hasBranchTemple"@en ;
+                 skos:note "A(사찰 본사)에는 말사 B(사찰 말사)가 있다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasBrother
+:hasBrother rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            owl:inverseOf :isBrotherOf ;
+            rdfs:domain :Actor ;
+            dc:description "형제 ~가 있다"@ko ;
+            rdfs:label "hasBrother"@en ;
+            skos:example "조선 세종 - 효령대군"@ko ;
+            skos:note "형제"@ko ;
+            skos:scopeNote "형 / 남동생 / 오빠 / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasBrotherInLaw
+:hasBrotherInLaw rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 ;
+                 rdfs:domain :Actor ;
+                 rdfs:range :Actor ;
+                 dc:description "매부·동서·처남·시형제 ~가 있다"@ko ;
+                 rdfs:label "hasBrotherInLaw"@en ;
+                 skos:scopeNote "매부 / 동서 / 처남 / 시형제 / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasChineseExplanation
+:hasChineseExplanation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :ST ;
+                       rdfs:domain :Story ;
+                       rdfs:range :Story ;
+                       dc:description "중국어 해설문 ~이 있다"@ko ;
+                       rdfs:label "hasChineseExplanation"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasConcubine
+:hasConcubine rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ,
+                                 :isHusbandOf ;
+              owl:inverseOf :isConcubineOf ;
+              rdfs:domain :Actor ;
+              rdfs:range :Actor ;
+              dc:description "첩 ~를 두었다"@ko ;
+              rdfs:label "hasConcubine"@en ;
+              skos:note "첩"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasContextualElement
+:hasContextualElement rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :ST ;
+                      rdfs:domain :Story ;
+                      rdfs:range :Story ;
+                      dc:description "스토리라인을 구성하는 세부 에피소드 ~이 있다"@ko ;
+                      rdfs:label "hasContextualElement"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasCousin
+:hasCousin rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           rdf:type owl:SymmetricProperty ;
+           rdfs:domain :Actor ;
+           dc:description "~가 사촌이다"@ko ;
+           rdfs:label "hasCousin"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDaughter
+:hasDaughter rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             owl:inverseOf :isDaughterOf ;
+             rdfs:domain :Actor ;
+             rdfs:range :Actor ;
+             dc:description "딸 ~가 있다"@ko ;
+             rdfs:label "hasDaughter"@en ;
+             skos:example "장흥효 - 장계향"@ko ;
+             skos:note "부녀관계 / 모녀관계"@ko ;
+             skos:scopeNote "부녀관계(=isFatherOf) / 모녀관계(=isMotherOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDaughterInLaw
+:hasDaughterInLaw rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A1 ;
+                  owl:inverseOf :isDaughterInLawOf ;
+                  rdfs:domain :Actor ;
+                  rdfs:range :Actor ;
+                  dc:description "며느리 ~가 있다"@ko ;
+                  rdfs:label "hasDaughterInLaw"@en ;
+                  skos:note "시부-며느리 / 시모-며느리"@ko ;
+                  skos:scopeNote "시부입장(=isFatherInLawOf) / 시모입장(=isMotherInLawOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDescendant
+:hasDescendant rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ;
+               owl:inverseOf :isDescendantOf ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Actor ;
+               rdfs:range :Actor ;
+               dc:description "후손 ~가 있다"@ko ;
+               rdfs:label "hasDescendant"@en ;
+               skos:example "김성일 - 김주국"@ko ;
+               skos:note "세대 불특정 선조-후손 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDisciple
+:hasDisciple rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty :isMasterOf ;
+             rdfs:subPropertyOf :A1 ;
+             owl:inverseOf :isDiscipleOf ;
+             dc:description "제자 ~가 있다"@ko ;
+             rdfs:label "hasDisciple"@en ;
+             skos:example "이황 - 김성일"@ko ;
+             skos:note "스승-제자 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasDrawing
+:hasDrawing rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :AR ;
+            rdfs:domain :Architecture ;
+            rdfs:range :Record ;
+            dc:description "도면 ~이 있다"@ko ;
+            rdfs:label "hasDrawing"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasEnglishExplanation
+:hasEnglishExplanation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :ST ;
+                       rdfs:domain :Story ;
+                       rdfs:range :Story ;
+                       dc:description "영어 해설문 ~이 있다"@ko ;
+                       rdfs:label "hasEnglishExplanation"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasEpitaph
+:hasEpitaph rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :RE ;
+            rdfs:domain :Record ;
+            rdfs:range :Text ;
+            dc:description "(비석에) 비문 ~가 새겨져 있다"@ko ;
+            rdfs:label "hasEpitaph"@en ;
+            skos:note "A(비석)에는 비문 B(비문)가 새겨져 있다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasExhibition
+:hasExhibition rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E4 ;
+               rdfs:range :Event ;
+               dc:description "전시회 ~에서 전시되다"@ko ;
+               rdfs:label "hasExhibition"@en ;
+               skos:scopeNote "Domain : Object/Record" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasExhibitionAt
+:hasExhibitionAt rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :E4 ;
+                 dc:description "~에서 전시하다 ※ 소장처 외의 장소. 대여 전시 등."@ko ;
+                 rdfs:label "hasExhibitionAt"@en ;
+                 skos:note "대여 전시, 소장처 외의 전시 포함."@ko ;
+                 skos:scopeNote "Domain : Object/Record" ,
+                                "Range : Place/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasFather
+:hasFather rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           owl:inverseOf :isFatherOf ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor ;
+           dc:description "~가 아버지이다"@ko ;
+           rdfs:label "hasFather"@en ;
+           skos:note "A의 아버지는 B이다" ;
+           skos:scopeNote "부녀관계(=isDaughterOf) / 부자관계(=isSonOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasFatherInLaw
+:hasFatherInLaw rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                owl:inverseOf :isFatherInLawOf ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "~가 장인이다 / ~가 시아버지이다"@ko ;
+                rdfs:label "hasFatherInLaw"@en ;
+                skos:note "시부-며느리 / 장인-사위"@ko ;
+                skos:scopeNote "며느리입장(=isDaughterInLawOf) / 사위입장(=isSonInLawOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasGrandDaughter
+:hasGrandDaughter rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A1 ;
+                  owl:inverseOf :isGrandDaughterOf ;
+                  rdfs:domain :Actor ;
+                  rdfs:range :Actor ;
+                  dc:description "손녀 ~가 있다"@ko ;
+                  rdfs:label "hasGrandDaughter"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasGrandson
+:hasGrandson rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             owl:inverseOf :isGrandsonOf ;
+             rdfs:domain :Actor ;
+             rdfs:range :Actor ;
+             dc:description "손자 ~가 있다"@ko ;
+             rdfs:label "hasGrandson"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasHermitage
+:hasHermitage rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :HR ;
+              rdfs:domain :Place ;
+              rdfs:range :Place ;
+              dc:description "(사찰에) 암자 ~가 있다"@ko ;
+              rdfs:label "hasHermitage"@en ;
+              skos:note "A(사찰)에는 암자 B(사찰 암자)가 있다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasHistoricalSetting
+:hasHistoricalSetting rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :RE ;
+                      rdfs:domain :Record ;
+                      rdfs:range :Event ;
+                      dc:description "(작품의) 역사적 배경은 ~이다"@ko ;
+                      rdfs:label "hasHistoricalSetting"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasHusband
+:hasHusband rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            owl:inverseOf :isHusbandOf ;
+            rdfs:domain :Actor ;
+            rdfs:range :Actor ;
+            dc:description "~가 남편이다"@ko ;
+            rdfs:label "hasHusband"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasIngredient
+:hasIngredient rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :FO ;
+               rdfs:domain :Food ;
+               rdfs:range :Food ;
+               dc:description "식재료 ~를 쓴다"@ko ;
+               rdfs:label "hasIngredient"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasInscription
+:hasInscription rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :OB ;
+                rdfs:domain :Object ;
+                rdfs:range :Text ;
+                dc:description "(물품에) 명문 ~가 새겨져 있다"@ko ;
+                rdfs:label "hasInscription"@en ;
+                skos:note "A(물품)에는 명문 B(명문)가 새겨져 있다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasMaster
+:hasMaster rdf:type owl:ObjectProperty ;
+           owl:equivalentProperty :isDiscipleOf ;
+           rdfs:subPropertyOf :A1 ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor ;
+           dc:description "~가 스승이다"@ko ;
+           rdfs:label "hasMaster"@en ;
+           skos:note "A의 스승은 B이다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasMother
+:hasMother rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           owl:inverseOf :isMotherOf ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor ;
+           dc:description "~가 어머니이다"@ko ;
+           rdfs:label "hasMother"@en ;
+           skos:note "A의 어머니는 B이다" ;
+           skos:scopeNote "모녀관계(=isDaughterOf) / 모자관계(=isSonOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasMotherInLaw
+:hasMotherInLaw rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                owl:inverseOf :isMotherInLawOf ;
+                rdfs:label "hasMotherInLaw"@en ;
+                skos:note "시모-며느리 / 장모-사위"@ko ;
+                skos:scopeNote "며느리입장(=isDaughterInLawOf) / 사위입장(=isSonInLawOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasNewName
+:hasNewName rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :NM ;
+            owl:inverseOf :hasOldName ,
+                          :isNewNameOf ;
+            dc:description "새 이름은 ~이다 ※ 새 명칭; 후신(後身)" ;
+            rdfs:label "hasNewName"@en ;
+            skos:note "A의 새 이름은 B이다" ;
+            skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" ,
+                           "Range : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasOldName
+:hasOldName rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :NM ;
+            owl:inverseOf :isOldNameOf ;
+            dc:description "옛 이름은 ~이다 ※ 구 명칭; 전신(前身)" ;
+            rdfs:label "hasOldName"@en ;
+            skos:example "대우중공업 - 한국기계공업"@ko ;
+            skos:note "구 명칭; 전신(前身)" ;
+            skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" ,
+                           "Range : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :A1 ;
+          owl:inverseOf :isOwnerOf ;
+          rdfs:domain :Actor ;
+          rdfs:range :Actor ;
+          dc:description "주인은 ~이다"@ko ;
+          rdfs:label "hasOwner"@en ;
+          skos:example "일복 - 윤두서"@ko ;
+          skos:note "노비-주인 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :E2 ;
+                owl:inverseOf :participatesIn ;
+                rdfs:domain :Event ;
+                rdfs:range :Actor ;
+                dc:description "참석자 ~가 있다"@ko ;
+                rdfs:label "hasParticipant"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasPerformance
+:hasPerformance rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :E3 ;
+                owl:inverseOf :isPerformedIn ;
+                rdfs:domain :Event ;
+                rdfs:range :Concept ;
+                dc:description "(이벤트에) 공연 ~이 있다"@ko ;
+                rdfs:label "hasPerformance"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasPhoto
+:hasPhoto rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :XR ;
+          rdfs:domain :Multimedia ;
+          rdfs:range :WebResource ;
+          dc:description "사진 ~을 포함한다 ※ 주어는 사진첩"@ko ;
+          rdfs:label "hasPhoto"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasReferenceNote
+:hasReferenceNote rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :XR ;
+                  rdfs:domain :Multimedia ;
+                  dc:description "고증기록 ~이 있다 ※ 목적어는 3D 재현물에 관한 고증 사실을 기록한 온라인 기사"@ko ;
+                  rdfs:label "hasReferenceNote"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSister
+:hasSister rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           owl:inverseOf :isSisterOf ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor ;
+           dc:description "여자형제 ~가 있다"@ko ;
+           rdfs:label "hasSister"@en ;
+           skos:note "자매"@ko ;
+           skos:scopeNote "누나 / 언니 / 여동생 / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSisterInLaw
+:hasSisterInLaw rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "시누이·형수·제수·올케·처형제·동서 ~가 있다"@ko ;
+                rdfs:label "hasSisterInLaw"@en ;
+                skos:scopeNote "시누이 / 형수 / 제수 / 올케 / 처형제 / 동서 / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSon
+:hasSon rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :A1 ;
+        owl:inverseOf :isSonOf ;
+        rdfs:domain :Actor ;
+        rdfs:range :Actor ;
+        dc:description "아들 ~이 있다"@ko ;
+        rdfs:label "hasSon"@en ;
+        skos:example "모자관계: 혜경궁 홍씨 - 조선 정조"@ko ,
+                     "부자관계: 김주국 - 김광찬"@ko ;
+        skos:note "부자관계 / 모자관계"@ko ;
+        skos:scopeNote "부자관계(=isFatherOf) / 모자관계(=isMotherOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSonInLaw
+:hasSonInLaw rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             owl:inverseOf :isSonInLawOf ;
+             rdfs:domain :Actor ;
+             rdfs:range :Actor ;
+             dc:description "사위 ~이 있다"@ko ;
+             rdfs:label "hasSonInLaw"@en ;
+             skos:note "장인-사위 / 장모-사위"@ko ;
+             skos:scopeNote "장인입장(=isFatherInLawOf) / 장모입장(=isMotherInLawOf) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasStele
+:hasStele rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :HR ;
+          owl:inverseOf :isSteleOf ;
+          rdfs:label "hasStele"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasStupa
+:hasStupa rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :HR ;
+          owl:inverseOf :isStupaOf ;
+          rdfs:label "hasStupa"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            owl:inverseOf :isSubjectOf ;
+            rdfs:domain :Actor ;
+            rdfs:range :Actor ;
+            dc:description "신하 ~이 있다"@ko ;
+            rdfs:label "hasSubject"@en ;
+            skos:example "고려 우왕 - 최영"@ko ;
+            skos:note "임금-신하 관계"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasTemporalElement
+:hasTemporalElement rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :TM ;
+                    rdfs:domain :Index ;
+                    rdfs:range :Event ;
+                    dc:description "(이 역사연표는) 역사적 사실 ~을 포함한다."@ko ;
+                    rdfs:label "hasTemporalElement"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasText
+:hasText rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :RE ;
+         rdfs:domain :Record ;
+         rdfs:range :Text ;
+         dc:description "문장 ~이 있다"@ko ;
+         rdfs:label "hasText"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :RE ;
+            rdfs:domain :Record ;
+            rdfs:range :Record ;
+            dc:description "판본 ~이 있다"@ko ;
+            rdfs:label "hasVersion"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasVirtualParticipant
+:hasVirtualParticipant rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :E2 ;
+                       owl:inverseOf :virtuallyParticipatesIn ;
+                       rdfs:label "hasVirtualParticipant"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#hasWife
+:hasWife rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :A1 ,
+                            :isHusbandOf ;
+         owl:inverseOf :isWifeOf ;
+         dc:description "부인 ~이 있다"@ko ;
+         rdfs:label "hasWife"@en ;
+         skos:example "사도세자 - 혜경궁 홍씨"@ko ;
+         skos:note "처"@ko ;
+         skos:scopeNote "차서"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#includes
+:includes rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :CO ;
+          rdfs:domain :Concept ;
+          dc:description "~를 포함하다"@ko ;
+          rdfs:label "includes"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#inscriber
+:inscriber rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A2 ;
+           owl:inverseOf :isInscriberOf ;
+           rdfs:domain :Record ;
+           rdfs:range :Actor ;
+           dc:description "(금석문의) 글씨를 새긴 이는 ~이다"@ko ;
+           rdfs:label "inscriber"@en ;
+           skos:note "비문 새긴 이"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAdministratedBy
+:isAdministratedBy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :E2 ;
+                   rdfs:label "isAdministratedBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAdoptedHeirOf
+:isAdoptedHeirOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 ;
+                 rdfs:label "isAdoptedHeirOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAffinalKinOf
+:isAffinalKinOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "~의 인척이다"@ko ;
+                rdfs:label "isAffinalKinOf"@en ;
+                skos:note "인척(혼인으로 맺어진 친척)"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAnnotatorOf
+:isAnnotatorOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A2 ;
+               rdfs:label "isAnnotatorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAvailableAt
+:isAvailableAt rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :XR ;
+               rdfs:domain :Multimedia ;
+               dc:description "~에서 입수할 수 있다 ※ 목적어는 3D 재현물을 다운로드받을 수 있는 온라인 사이트"@ko ;
+               rdfs:label "isAvailableAt"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isAwarded
+:isAwarded rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :E3 ;
+           rdfs:domain :Actor ;
+           dc:description "~을 상으로 받다"@ko ;
+           rdfs:label "isAwarded"@en ;
+           skos:scopeNote "relation attribute : 수량(quantity. 예: 1필)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isBirthPlaceOf
+:isBirthPlaceOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :P1 ;
+                rdfs:domain :Place ;
+                rdfs:range :Actor ;
+                dc:description "~의 생가/출생지이다"@ko ;
+                rdfs:label "isBirthPlaceOf"@en ;
+                skos:note "A(장소)는 B(인물)의 생가/출생지이다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isBrotherOf
+:isBrotherOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             rdfs:label "isBrotherOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isCalligrapherOf
+:isCalligrapherOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A2 ;
+                  rdfs:label "isCalligrapherOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isCausedBy
+:isCausedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :E1 ;
+            rdfs:domain :Event ;
+            rdfs:range :Event ;
+            dc:description "(사건이) 사건 ~로 인해 발생했다"@ko ;
+            rdfs:label "isCausedBy"@en ;
+            skos:note "A(사건)는 B로 인해 발생했다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isConceptionPlaceOf
+:isConceptionPlaceOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :P1 ;
+                     rdfs:domain :Place ;
+                     rdfs:range :Actor ;
+                     dc:description "~의 수태지이다"@ko ;
+                     rdfs:label "isConceptionPlaceOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isConcubineOf
+:isConcubineOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ,
+                                  :hasHusband ;
+               dc:description "~의 첩이다"@ko ;
+               rdfs:label "isConcubineOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isConstructorOf
+:isConstructorOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :AR ;
+                 rdfs:label "isConstructorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isContributorOf
+:isContributorOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A2 ;
+                 owl:inverseOf dcterms:contributor ;
+                 rdfs:label "isContributorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isCreatorOf
+:isCreatorOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A2 ;
+             owl:inverseOf dcterms:creator ;
+             rdfs:label "isCreatorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isCurrentLocationOf
+:isCurrentLocationOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :P2 ;
+                     owl:inverseOf edm:currentLocation ;
+                     rdfs:label "isCurrentLocationOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isCurrentlySituatedOn
+:isCurrentlySituatedOn rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :P2 ;
+                       rdfs:range :Place ;
+                       dc:description "(현존건물이) 유적지 ~에 있다"@ko ;
+                       rdfs:label "isCurrentlySituatedOn"@en ;
+                       skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDaughterInLawOf
+:isDaughterInLawOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :A1 ;
+                   rdfs:label "isDaughterInLawOf"@en ;
+                   skos:scopeNote "시부대상(=hasFatherInLaw) / 시모대상(=hasMotherInLaw) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDaughterOf
+:isDaughterOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ;
+              rdfs:label "isDaughterOf"@en ;
+              skos:scopeNote "부녀관계(=hasFather) / 모녀관계(=hasMother) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDeathPlaceOf
+:isDeathPlaceOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :P1 ;
+                rdfs:domain :Place ;
+                rdfs:range :Actor ;
+                dc:description "~의 사망지이다"@ko ;
+                rdfs:label "isDeathPlaceOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDepictedIn
+:isDepictedIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :RE ;
+              dc:description "~에 묘사되어 있다"@ko ;
+              rdfs:label "isDepictedIn"@en ;
+              skos:example "고산구곡 - 고산구곡도"@ko ;
+              skos:note "A는 B 속에서 묘사되다" ;
+              skos:scopeNote "Range : Object/Record" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDescendantOf
+:isDescendantOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "isDescendantOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDesignatedAs
+:isDesignatedAs rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :HR ;
+                rdfs:domain :Place ;
+                rdfs:range :Heritage ;
+                dc:description "(문화재) ~로 지정되다"@ko ;
+                rdfs:label "isDesignatedAs"@en ;
+                skos:note "A(문화유산)는 문화유산 B(지정번호)로 지정되었다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDiscipleOf
+:isDiscipleOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ;
+              rdfs:label "isDiscipleOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isDocumentedIn
+:isDocumentedIn rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :RE ;
+                rdfs:label "isDocumentedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isEnshrinedIn
+:isEnshrinedIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :P2 ;
+               rdfs:domain :Actor ;
+               rdfs:range :Place ;
+               dc:description "~에 제향되다"@ko ;
+               rdfs:label "isEnshrinedIn"@en ;
+               skos:example "이순신 - 현충사"@ko ;
+               skos:note "제향"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFatherInLawOf
+:isFatherInLawOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 ;
+                 rdfs:label "isFatherInLawOf"@en ;
+                 skos:note "시부-며느리 / 장인-사위"@ko ;
+                 skos:scopeNote "장인입장(=hasSonInLaw) / 시부입장(=hasDaughterInLaw) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFatherOf
+:isFatherOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            rdfs:label "isFatherOf"@en ;
+            skos:scopeNote "부녀관계(=hasDaughter) / 부자관계(=hasSon) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFellowOf
+:isFellowOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            rdfs:domain :Actor ;
+            rdfs:range :Actor ;
+            dc:description "~의 친구이다"@ko ;
+            rdfs:label "isFellowOf"@en ;
+            skos:note "동문수학/동류"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFormerlocationOf
+:isFormerlocationOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :P2 ;
+                    owl:inverseOf edm:formerLocation ;
+                    rdfs:label "isFormerlocationOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isFounderOf
+:isFounderOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :AR ;
+             rdfs:label "isFounderOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isGarnishedWith
+:isGarnishedWith rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :FO ;
+                 rdfs:domain :Food ;
+                 rdfs:range :Object ;
+                 dc:description "상화 ~로 장식하다"@ko ;
+                 rdfs:label "isGarnishedWith"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isGrandDaughterOf
+:isGrandDaughterOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :A1 ;
+                   rdfs:label "isGrandDaughterOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isGrandsonOf
+:isGrandsonOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ;
+              rdfs:label "isGrandsonOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isHeldAt
+:isHeldAt rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :E2 ;
+          rdfs:domain :Event ;
+          rdfs:range :Place ;
+          dc:description "~에서 개최되었다"@ko ;
+          rdfs:label "isHeldAt"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isHeldBy
+:isHeldBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :XR ;
+          rdfs:domain :WebResource ;
+          rdfs:range :Place ;
+          dc:description "아카이브 소장 자료의 소장처는 ~이다 ※ 목적어는 아카이브"@ko ;
+          rdfs:label "isHeldBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isHeldFor
+:isHeldFor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :E2 ;
+           rdfs:domain :Event ;
+           rdfs:range :Actor ;
+           dc:description "~를 위해 개최되었다"@ko ;
+           rdfs:label "isHeldFor"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isHusbandOf
+:isHusbandOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             rdfs:label "isHusbandOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isInfluencedBy
+:isInfluencedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :CO ;
+                dc:description "~에 의해 영향받다"@ko ;
+                rdfs:label "isInfluencedBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isInscriberOf
+:isInscriberOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A2 ;
+               rdfs:label "isInscriberOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isKindOf
+:isKindOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :CO ;
+          dc:description "~의 한 종류이다 ※ 분류 체계상의 분류인 경우에는 type" ;
+          rdfs:label "isKindOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isLineageKinOf
+:isLineageKinOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdfs:domain :Actor ;
+                rdfs:range :Actor ;
+                dc:description "~의 친척이다"@ko ;
+                rdfs:label "isLineageKinOf"@en ;
+                skos:note "직계친족"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isLocatedIn
+:isLocatedIn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :P2 ;
+             rdfs:range :Place ;
+             dc:description "~에 위치하다"@ko ;
+             rdfs:label "isLocatedIn"@en ;
+             skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)/Object" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMadeOf
+:isMadeOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :OB ;
+          rdfs:domain :Object ;
+          rdfs:range :Object ;
+          dc:description "~로 만들었다"@ko ;
+          rdfs:label "isMadeOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMasterOf
+:isMasterOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            rdfs:label "isMasterOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A3 ;
+            owl:inverseOf foaf:member ;
+            rdfs:domain :Actor ;
+            rdfs:range :Actor ;
+            dc:description "~의 일원이다"@ko ;
+            rdfs:label "isMemberOf"@en ;
+            skos:scopeNote "Range : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMentionedBy
+:isMentionedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ;
+               rdfs:domain :Actor ;
+               rdfs:range :Actor ;
+               dc:description "~에 의해 언급되었다"@ko ;
+               rdfs:label "isMentionedBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMentionedIn
+:isMentionedIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :RE ;
+               owl:inverseOf :mentions ;
+               rdfs:range :Record ;
+               dc:description "~에 언급되다"@ko ;
+               rdfs:label "isMentionedIn"@en ;
+               skos:example "청심원 - 언해납약증치방"@ko ;
+               skos:note "A가 문헌 B 내용에서 명확히 언급됨" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMotherInLawOf
+:isMotherInLawOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :A1 ;
+                 rdfs:domain :Actor ;
+                 rdfs:range :Actor ;
+                 rdfs:label "isMotherInLawOf"@en ;
+                 skos:note "시모-며느리 / 장모-사위"@ko ;
+                 skos:scopeNote "시모입장(=hasDaughterInLaw) / 장모입장(=hasSonInLaw) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isMotherOf
+:isMotherOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            rdfs:label "isMotherOf"@en ;
+            skos:scopeNote "모녀관계(=hasDaughter) / 모자관계(=hasSon) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isNamedAfter
+:isNamedAfter rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :NM ;
+              dc:description "~를 따라 이름지었다"@ko ;
+              rdfs:label "isNamedAfter"@en ;
+              skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" ,
+                             "Range : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isNamedBy
+:isNamedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :AR ;
+           rdfs:domain :Architecture ;
+           rdfs:range :Actor ;
+           dc:description "~가 명명했다"@ko ;
+           rdfs:label "isNamedBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isNamesakeOf
+:isNamesakeOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :NM ;
+              dc:description "~와 같은 이름이다 ※ 실체는 다른데 이름이 같은 경우"@ko ;
+              rdfs:label "isNamesakeOf"@en ;
+              skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" ,
+                             "Range : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isNear
+:isNear rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :P1 ;
+        rdfs:domain :Place ;
+        rdfs:range :Place ;
+        dc:description "~에 가까이 있다"@ko ;
+        rdfs:label "isNear"@en ;
+        skos:example "금산 칠백의총 - 금산 칠백의총 기념관"@ko ;
+        skos:note "물리적 인접"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isNewNameOf
+:isNewNameOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :NM ;
+             rdfs:label "isNewNameOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isOfficialPostOf
+:isOfficialPostOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A4 ;
+                  rdfs:domain :Concept ;
+                  rdfs:range :Actor ;
+                  dc:description "관청 ~의 관직이다"@ko ;
+                  rdfs:label "isOfficialPostOf"@en ;
+                  skos:scopeNote "Range : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isOldNameOf
+:isOldNameOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :NM ;
+             rdfs:label "isOldNameOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isOperatedIn
+:isOperatedIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :E2 ;
+              rdfs:domain :Actor ;
+              rdfs:range :Event ;
+              dc:description "(시설이) 이벤트 ~에서 운영되었다"@ko ;
+              rdfs:label "isOperatedIn"@en ;
+              skos:scopeNote "Domain : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isOwnerOf
+:isOwnerOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           rdfs:label "isOwnerOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPasserOf
+:isPasserOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A4 ;
+            rdfs:domain :Actor ;
+            rdfs:range :Event ;
+            dc:description "(과거시험) ~의 합격자이다"@ko ;
+            rdfs:label "isPasserOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPerformedAt
+:isPerformedAt rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E3 ;
+               rdfs:range :Place ;
+               dc:description "(공연/의식이) ~에서 열렸다"@ko ;
+               rdfs:label "isPerformedAt"@en ;
+               skos:example "독립선언식 - 태화관"@ko ;
+               skos:note "의식 실행 장소"@ko ;
+               skos:scopeNote "Domain : Event/Concept" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPerformedBy
+:isPerformedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E3 ;
+               rdfs:domain :Concept ;
+               rdfs:range :Actor ;
+               dc:description "~가 공연했다"@ko ;
+               rdfs:label "isPerformedBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPerformedIn
+:isPerformedIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E3 ;
+               dc:description "(공연이) 이벤트 ~에서 공연되었다"@ko ;
+               rdfs:label "isPerformedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPlacentaChamberOf
+:isPlacentaChamberOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :P1 ;
+                     rdfs:domain :Place ;
+                     rdfs:range :Actor ;
+                     dc:description "~의 태실이다"@ko ;
+                     rdfs:label "isPlacentaChamberOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPostedIn
+:isPostedIn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :RE ;
+            rdfs:domain :Record ;
+            rdfs:range :Record ;
+            dc:description "사진이 문헌(신문, 잡지) ~에 실렸다"@ko ;
+            rdfs:label "isPostedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPreviousInSequenceTo
+:isPreviousInSequenceTo rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :CO ;
+                        owl:inverseOf edm:isNextInSequenceTo ;
+                        dc:description "(순서상) ~ 앞이다. ※ 사건, 항목 간의 인접연속 관계. A 다음이 B인 순서." ;
+                        rdfs:label "isPreviousInSequenceTo"@en ;
+                        skos:example "1번 - 2번" ;
+                        skos:note "사건, 항목 간의 인접연속 관계. A 다음이 B인 순서." ;
+                        skos:scopeNote "Domain : Event/Concept" ,
+                                       "Range : Event/Concept" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPreviouslySituatedOn
+:isPreviouslySituatedOn rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :P2 ;
+                        rdfs:range :Place ;
+                        dc:description "(부존건물이) 유적지 ~에 있었다"@ko ;
+                        rdfs:label "isPreviouslySituatedOn"@en ;
+                        skos:scopeNote "Domain : Place/Architecture/Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isProducedBy
+:isProducedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :P2 ;
+              rdfs:domain :Object ;
+              dc:description "~에서 만든다"@ko ;
+              rdfs:label "isProducedBy"@en ;
+              skos:scopeNote "Range : Actor/Place" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isProducedIn
+:isProducedIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :P2 ;
+              rdfs:domain :Object ;
+              rdfs:range :Place ;
+              dc:description "~ 지역에서 생산된다"@ko ;
+              rdfs:label "isProducedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isProvenanceOf
+:isProvenanceOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :RE ;
+                owl:inverseOf dcterms:provenance ;
+                rdfs:label "isProvenanceOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isProvidedIn
+:isProvidedIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :FO ;
+              rdfs:domain :Food ;
+              rdfs:range :Event ;
+              dc:description "(상차림이) 이벤트 ~에서 제공되다"@ko ;
+              rdfs:label "isProvidedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isPublisherOf
+:isPublisherOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A2 ;
+               owl:inverseOf dcterms:publisher ;
+               rdfs:label "isPublisherOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isReconstructorOf
+:isReconstructorOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :AR ;
+                   owl:inverseOf :reconstructor ;
+                   rdfs:label "isReconstructorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isReferencedFrom
+:isReferencedFrom rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :XR ;
+                  rdfs:domain :Index ;
+                  rdfs:range :Bibliography ;
+                  dc:description "문헌자료 ~를 참고하다"@ko ;
+                  rdfs:label "isReferencedFrom"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isRenovatorOf
+:isRenovatorOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :AR ;
+               owl:inverseOf :renovator ;
+               rdfs:label "isRenovatorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isRightsHolderOf
+:isRightsHolderOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A2 ;
+                  owl:inverseOf dcterms:rightsHolder ;
+                  rdfs:label "isRightsHolderOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isServedIn
+:isServedIn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FO ;
+            rdfs:domain :Food ;
+            rdfs:range :Object ;
+            dc:description "(음식이) 그릇 ~에 담아 제공되다"@ko ;
+            rdfs:label "isServedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isServedOn
+:isServedOn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FO ;
+            rdfs:domain :Food ;
+            rdfs:range :Object ;
+            dc:description "(음식이) 음식상 ~에 차려지다"@ko ;
+            rdfs:label "isServedOn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isServedTo
+:isServedTo rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FO ;
+            rdfs:domain :Food ;
+            rdfs:range :Actor ;
+            dc:description "인물 ~에게 제공되다"@ko ;
+            rdfs:label "isServedTo"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSisterOf
+:isSisterOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A1 ;
+            rdfs:label "isSisterOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSiteOf
+:isSiteOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :P1 ;
+          rdfs:domain :Place ;
+          dc:description "~의 유적지이다"@ko ;
+          rdfs:label "isSiteOf"@en ;
+          skos:scopeNote "Range : Place/Architecture/Agent" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSonInLawOf
+:isSonInLawOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :A1 ;
+              rdfs:label "isSonInLawOf"@en ;
+              skos:scopeNote "장인대상(=hasFatherInLaw) / 장모대상(=hasMotherInLaw) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSonOf
+:isSonOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :A1 ;
+         rdfs:label "isSonOf"@en ;
+         skos:scopeNote "부자관계(=hasFather) / 모자관계(=hasMother) / 미상未詳" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSteleOf
+:isSteleOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :HR ;
+           rdfs:domain :Object ;
+           rdfs:range :Actor ;
+           dc:description "~의 신도비(탑비)이다"@ko ;
+           rdfs:label "isSteleOf"@en ;
+           skos:example "장흥 보림사 보조선사탑비 - 체징"@ko ;
+           skos:note "인물·사건의 기념비"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isStoredIn
+:isStoredIn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :OB ;
+            rdfs:domain :Object ;
+            dc:description "~에 보관하다"@ko ;
+            rdfs:label "isStoredIn"@en ;
+            skos:scopeNote "Range : Place/Architecture" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isStupaOf
+:isStupaOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :HR ;
+           rdfs:domain :Object ;
+           rdfs:range :Actor ;
+           dc:description "~의 승탑이다"@ko ;
+           rdfs:label "isStupaOf"@en ;
+           skos:example "장흥 보림사 보조선사탑- 체징"@ko ;
+           skos:note "승탑"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isSubjectOf
+:isSubjectOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :A1 ;
+             rdfs:label "isSubjectOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isTombOf
+:isTombOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :HR ;
+          rdfs:domain :Place ;
+          rdfs:range :Actor ;
+          dc:description "~의 무덤이다"@ko ;
+          rdfs:label "isTombOf"@en ;
+          skos:note "A는 B의 무덤(인물)이다" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isTombstoneOf
+:isTombstoneOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :HR ;
+               rdfs:domain :Object ;
+               rdfs:range :Actor ;
+               dc:description "~의 비석이다"@ko ;
+               rdfs:label "isTombstoneOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isTranslatorOf
+:isTranslatorOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A2 ;
+                owl:inverseOf :translator ;
+                rdfs:label "isTranslatorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isUsedIn
+:isUsedIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :OB ;
+          rdfs:domain :Object ;
+          rdfs:range :Event ;
+          dc:description "~에 쓰인다"@ko ;
+          rdfs:label "isUsedIn"@en ;
+          skos:example "근배 - 동뢰"@ko ;
+          skos:note "의례·사건에서의 사용"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isVictimOf
+:isVictimOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :E1 ;
+            rdfs:domain :Actor ;
+            rdfs:range :Event ;
+            dc:description "(인물이) 사건 ~의 희생자이다"@ko ;
+            rdfs:label "isVictimOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isWifeOf
+:isWifeOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :A1 ,
+                             :hasHusband ;
+          dc:description "~의 부인이다"@ko ;
+          rdfs:label "isWifeOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isWornBy
+:isWornBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :CL ;
+          owl:inverseOf :wears ;
+          rdfs:label "isWornBy"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isWornIn
+:isWornIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :CL ;
+          rdfs:domain :Clothing ;
+          dc:description "(복장을) 행사 ~에서 입다"@ko ;
+          rdfs:label "isWornIn"@en ;
+          skos:scopeNote "Range : Event/Concept" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#isWriterOf
+:isWriterOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A2 ;
+            owl:inverseOf :writer ;
+            rdfs:label "isWriterOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#leads
+:leads rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :E1 ;
+       rdfs:domain :Actor ;
+       rdfs:range :Event ;
+       dc:description "(인물이) 사건 ~을 주도하다"@ko ;
+       rdfs:label "leads"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#livesIn
+:livesIn rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :P2 ;
+         rdfs:domain :Actor ;
+         rdfs:range :Place ;
+         dc:description "~에 살다"@ko ;
+         rdfs:label "livesIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#mentions
+:mentions rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :RE ;
+          dc:description "~를 언급하다"@ko ;
+          rdfs:label "mentions"@en ;
+          skos:example "언해납약증치방 - 청심원"@ko ;
+          skos:note "문헌 A의 내용 중 B를 명확히 언급" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#mightBeRelatedTo
+:mightBeRelatedTo rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :CO ;
+                  dc:description "~과 관계가 있을지도 모른다"@ko ;
+                  rdfs:label "mightBeRelatedTo"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#onlineReference
+:onlineReference rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :XR ;
+                 dc:description "웹자원 목록은 ~이다 ※ 목적어는 웹자원 색인(ref-XXXX) 노드" ;
+                 rdfs:label "onlineReference"@en ;
+                 skos:scopeNote "Range : Index/WebResource" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#owner
+:owner rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :A2 ;
+       rdfs:range :Actor ;
+       dc:description "(유물의) 소유주는 ~이다"@ko ;
+       rdfs:label "owner"@en ;
+       skos:scopeNote "Domain : Record/Object" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#participatesIn
+:participatesIn rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :E2 ;
+                dc:description "~에 참여하다"@ko ;
+                rdfs:label "participatesIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#plays
+:plays rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :E3 ;
+       rdfs:domain :Actor ;
+       rdfs:range :Object ;
+       dc:description "악기 ~를 연주하다"@ko ;
+       rdfs:label "plays"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#prepares
+:prepares rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FO ;
+          rdfs:domain :Actor ;
+          rdfs:range :Food ;
+          dc:description "음식, 식재료 ~을 준비한다"@ko ;
+          rdfs:label "prepares"@en ;
+          skos:scopeNote "Domain : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#reconstructor
+:reconstructor rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :AR ;
+               rdfs:domain :Architecture ;
+               rdfs:range :Actor ;
+               dc:description "재건자는 ~이다 ※ 수축(修築)을 지휘" ;
+               rdfs:label "reconstructor"@en ;
+               skos:example "백마산성 - 강감찬"@ko ;
+               skos:note "수축(修築)을 지휘" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#renovator
+:renovator rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :AR ;
+           rdfs:domain :Architecture ;
+           rdfs:range :Actor ;
+           dc:description "중건자는 ~이다 ※ 중창·중건 추진"@ko ;
+           rdfs:label "renovator"@en ;
+           skos:example "고성 유점사 - 유정"@ko ;
+           skos:note "중창·중건 추진"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#serves
+:serves rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :FO ;
+        rdfs:domain :Actor ;
+        rdfs:range :Food ;
+        dc:description "음식 ~을 차린다"@ko ;
+        rdfs:label "serves"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#servesAs
+:servesAs rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :A4 ;
+          rdfs:domain :Actor ;
+          rdfs:range :Concept ;
+          dc:description "관직 ~를 역임했다"@ko ;
+          rdfs:label "servesAs"@en ;
+          skos:example "서유문 - 서장관"@ko ;
+          skos:note """(관직/직무/역할)을 수행
+[HistoryNote] servedAs 에서 변경"""@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#servesTemporarilyAs
+:servesTemporarilyAs rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :A4 ;
+                     rdfs:domain :Actor ;
+                     rdfs:range :Concept ;
+                     dc:description "임시로 ~의 직책을 수행하다"@ko ;
+                     rdfs:label "servesTemporarilyAs"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#textReference
+:textReference rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :XR ;
+               rdfs:range :Text ;
+               dc:description "문헌상의 근거 텍스트는 ~이다 ※ 목적어는 온라인 텍스트 원문"@ko ;
+               rdfs:label "textReference"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#timeline
+:timeline rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :TM ;
+          rdfs:range :Index ;
+          dc:description "연표 ~이 있다 ※ 목적어는 주어와 관련이 있는 역사연표"@ko ;
+          rdfs:label "timeline"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#translator
+:translator rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A2 ;
+            rdfs:domain :Record ;
+            rdfs:range :Actor ;
+            dc:description "번역자는 ~이다"@ko ;
+            rdfs:label "translator"@en ;
+            skos:example "태교신기언해 - 유희"@ko ;
+            skos:note "번역자; 언해자."@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#virtuallyParticipatesIn
+:virtuallyParticipatesIn rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :E2 ;
+                         rdfs:domain :Actor ;
+                         rdfs:range :Event ;
+                         dc:description "~에 가상으로 참여하다. ~에 참여한 것으로 간주하다 ※ 기록물에 참여한 듯이 기록"@ko ;
+                         rdfs:label "virtuallyParticipatesIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasBuriedIn
+:wasBuriedIn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :P2 ;
+             rdfs:domain :Actor ;
+             rdfs:range :Place ;
+             dc:description "~에 묻혔다"@ko ;
+             rdfs:label "wasBuriedIn"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasExecutedAt
+:wasExecutedAt rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :P2 ;
+               rdfs:domain :Actor ;
+               rdfs:range :Place ;
+               dc:description "~에서 처형되었다"@ko ;
+               rdfs:label "wasExecutedAt"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasOrdainedBy
+:wasOrdainedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :A1 ;
+               owl:inverseOf :wasPreceptorOf ;
+               rdfs:domain :Actor ;
+               rdfs:range :Actor ;
+               dc:description "~로부터 계를 받았다"@ko ;
+               rdfs:label "wasOrdainedBy"@en ;
+               skos:example "수철 - 윤법"@ko ;
+               skos:note "계를 받았다(승려 간)"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasPosthumouslyPromotedTo
+:wasPosthumouslyPromotedTo rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :A4 ;
+                           rdfs:domain :Actor ;
+                           rdfs:range :Concept ;
+                           dc:description "증직 ~를 받다"@ko ;
+                           rdfs:label "wasPosthumouslyPromotedTo"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wasPreceptorOf
+:wasPreceptorOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A1 ;
+                rdfs:label "wasPreceptorOf"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#wears
+:wears rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :CL ;
+       rdfs:domain :Actor ;
+       rdfs:range :Clothing ;
+       dc:description "복장 ~를 입다"@ko ;
+       rdfs:label "wears"@en ;
+       skos:example "궁녀 - 당의"@ko ;
+       skos:note "궁중복식에서 입는 대상"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#writer
+:writer rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :A2 ;
+        rdfs:domain :Record ;
+        rdfs:range :Actor ;
+        dc:description "(금석문의) 글 쓴 이는 ~이다"@ko ;
+        rdfs:label "writer"@en ;
+        skos:example "김언경 - 장흥 보림사 보조선사탑비"@ko ;
+        skos:note "글 쓴 사람. 비문 지은이."@ko .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :A2 ;
+                    rdfs:range :Actor ;
+                    dc:description "기여자는 ~이다"@ko ;
+                    rdfs:label "contributor"@en ;
+                    skos:example "장흥 보림사 - 신라 헌강왕"@ko ;
+                    skos:note "기여자"@ko ;
+                    skos:scopeNote "Domain : Record/Object/Event" .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :A2 ;
+                rdfs:range :Actor ;
+                dc:description "(문헌/작품의) 창작자는 ~이다"@ko ;
+                rdfs:label "creator"@en ;
+                skos:example "도산십이곡 - 이황"@ko ;
+                skos:note "창작자(저자)로 인정받는 제작자"@ko ;
+                skos:scopeNote "Domain : Record/Object" .
+
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :CO ;
+                owl:inverseOf dcterms:isPartOf ;
+                dc:description "부분 ~이 있다"@ko ;
+                rdfs:label "hasPart"@en ;
+                skos:example "도산십이곡 - 도산십이곡 발문"@ko ;
+                skos:note "전체-부분 관계"@ko ;
+                skos:scopeNote "relation attribute : 수량(quantity. 예: 5개)" .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :CO ;
+                 dc:description "~의 부분이다"@ko ;
+                 rdfs:label "isPartOf"@en ;
+                 skos:example "도산십이곡 발문 - 도산십이곡"@ko ;
+                 skos:note "부분-전체 관계"@ko .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+dcterms:isReferencedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :RE ;
+                       owl:inverseOf dcterms:references ;
+                       rdfs:label "isReferencedBy"@en .
+
+
+###  http://purl.org/dc/terms/provenance
+dcterms:provenance rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :RE ;
+                   dc:description "(소장품의) 기원/유래/출처는 ~이다 ※ 출처: 원 소유자, 원 소장처, 발견·발굴 장소, 기증자 등"@ko ;
+                   rdfs:label "provenance"@en ;
+                   skos:example "왕오천축국전 - 돈황석굴"@ko ;
+                   skos:note "출처; 원 소장처; 발견·발굴 장소"@ko ;
+                   skos:scopeNote "Domain : Record/Object" ,
+                                  "Range : Actor/Place" .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :A2 ;
+                  rdfs:domain :Record ;
+                  rdfs:range :Actor ;
+                  dc:description "출판자는 ~이다"@ko ;
+                  rdfs:label "publisher"@en ;
+                  skos:example "어제계주윤음 - 교서관"@ko ;
+                  skos:note "필사/간행/중간/영인"@ko .
+
+
+###  http://purl.org/dc/terms/references
+dcterms:references rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :RE ;
+                   rdfs:range :Record ;
+                   dc:description "~를 참고하다"@ko ;
+                   rdfs:label "references"@en ;
+                   skos:example "고산구곡도 - 고산구곡가"@ko ;
+                   skos:note "실제 내용의 참조"@ko ;
+                   skos:scopeNote "Domain : Record/Concept" .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dcterms:rightsHolder rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :A2 ;
+                     rdfs:range :Actor ;
+                     dc:description "저작권자는 ~이다 ※ 저작권 보유자"@ko ;
+                     rdfs:label "rightsHolder"@en ;
+                     skos:example "세종대왕 표준영정 - 운보문화재단"@ko ;
+                     skos:note "저작권 보유자"@ko ;
+                     skos:scopeNote "Domain : Record/Object" .
+
+
+###  http://purl.org/dc/terms/type
+dcterms:type rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :CO ;
+             dc:description "유형은 ~이다"@ko ;
+             rdfs:label "type"@en ;
+             skos:example "세종대왕 표준영정 - 표준영정"@ko ;
+             skos:note "특정 분류체계에 배속 시. 그 외의 성격/유형은 edm:isRelatedTo." .
+
+
+###  http://www.europeana.eu/schemas/edm/currentLocation
+edm:currentLocation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :P2 ;
+                    rdfs:domain :Object ;
+                    dc:description "소재지(소장처)는 ~이다"@ko ;
+                    rdfs:label "currentLocation"@en ;
+                    skos:example "고성 유점사 종 - 고성 보현사"@ko ;
+                    skos:note "현재 소장처"@ko ;
+                    skos:scopeNote "Range : Place/Agent" .
+
+
+###  http://www.europeana.eu/schemas/edm/formerLocation
+edm:formerLocation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :P2 ;
+                   rdfs:domain :Object ;
+                   dc:description "옛 소재지(소장처)는 ~이다"@ko ;
+                   rdfs:label "formerLocation"@en ;
+                   skos:example "고성 유점사 종 - 고성 유점사"@ko ;
+                   skos:note "과거 소장처"@ko ;
+                   skos:scopeNote "Range : Place/Agent" .
+
+
+###  http://www.europeana.eu/schemas/edm/happenedAt
+edm:happenedAt rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :E1 ;
+               rdfs:domain :Event ;
+               rdfs:range :Place ;
+               dc:description "(사건이) 장소 ~에서 일어나다"@ko ;
+               rdfs:label "happenedAt"@en ;
+               skos:example "명량대첩 - 명량해협"@ko ;
+               skos:note "사건이 발생한 장소"@ko .
+
+
+###  http://www.europeana.eu/schemas/edm/isDerivativeOf
+edm:isDerivativeOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :RE ;
+                   dc:description "~의 파생물이다"@ko ;
+                   rdfs:label "isDerivativeOf"@en ;
+                   skos:example "삼강행실도 언해 - 삼강행실도"@ko ;
+                   skos:note "파생작; 번역물"@ko ;
+                   skos:scopeNote "Domain : Record/Object" ,
+                                  "Range : Record/Object" .
+
+
+###  http://www.europeana.eu/schemas/edm/isNextInSequenceTo
+edm:isNextInSequenceTo rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :CO ;
+                       dc:description "(순서상) ~ 다음이다 ※ 사건, 항목 간의 인접연속 관계. B 다음이 A인 순서." ;
+                       rdfs:label "isNextInSequenceTo"@en ;
+                       skos:example "2번 - 1번" ;
+                       skos:note "사건, 항목 간의 인접연속 관계. A가 B 다음인 순서." ;
+                       skos:scopeNote "Domain : Event/Concept" ,
+                                      "Range : Event/Concept" .
+
+
+###  http://www.europeana.eu/schemas/edm/isRelatedTo
+edm:isRelatedTo rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :CO ;
+                dc:description "~와 관계가 있다"@ko ;
+                rdfs:label "isRelatedTo"@en ;
+                skos:note "기타 포괄적 연관 관계"@ko .
+
+
+###  http://www.europeana.eu/schemas/edm/isShownAt
+edm:isShownAt rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :XR ;
+              rdfs:range :WebResource ;
+              dc:description "(웹 자원) ~에 보인다"@ko ;
+              rdfs:label "isShownAt"@en ;
+              skos:scopeNote "Domain : Any/Index" ,
+                             "relation attribute : 해설, 참고, 원문 ※ subclass 명칭" .
+
+
+###  http://www.europeana.eu/schemas/edm/isShownBy
+edm:isShownBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :XR ;
+              dc:description "(웹 자원) ~에 보인다"@ko ;
+              rdfs:label "isShownBy"@en ;
+              skos:scopeNote "Domain : Any/Index" ,
+                             "Range : WebResource/Multimedia" ,
+                             "relation attribute : 3D_지도, 3D_모델, 지도, 그림, 도면, 동영상, 사진 ※ subclass 명칭" .
+
+
+###  http://www.europeana.eu/schemas/edm/isSuccessorOf
+edm:isSuccessorOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :RE ;
+                  dc:description "~의 후속이다 ※ 속편 작품"@ko ;
+                  rdfs:label "isSuccessorOf"@en ;
+                  skos:example "속장경 - 초조대장경"@ko ;
+                  skos:note "속편 작품"@ko ;
+                  skos:scopeNote "Domain : Record/Object" ,
+                                 "Range : Record/Object" .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :CO ;
+           dc:description "~와 같다"@ko ;
+           rdfs:label "sameAs"@en ;
+           skos:example "훈민정음 - 한글"@ko ;
+           skos:note "동일 또는 유사 관계"@ko .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+foaf:knows rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :A1 ;
+           rdfs:domain :Actor ;
+           rdfs:range :Actor ;
+           dc:description "~의 지인이다"@ko ;
+           rdfs:label "knows"@en ;
+           skos:example "신숙주 - 성삼문"@ko ;
+           skos:note "일반적인 교유관계"@ko .
+
+
+###  http://xmlns.com/foaf/0.1/member
+foaf:member rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :A3 ;
+            dc:description "구성원 ~이 있다"@ko ;
+            rdfs:label "member"@en ;
+            skos:example "집현전 - 정인지"@ko ;
+            skos:note "조직-구성원 관계"@ko ;
+            skos:scopeNote "Domain : Agent(Actor의 subclasses 중 기관, 단체 등)" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Actor
+:Actor rdf:type owl:Class ;
+       dc:description "Historical figures; Organizations as collective actors and institutions as operating entities"@en ,
+                      "역사적인 인물. 집단적 행위 주체로서의 단체, 운영주체로서의 기관"@ko ;
+       rdfs:label "Actor"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Architecture
+:Architecture rdf:type owl:Class ;
+              dc:description "Historic Buildings in a certain area and historically related structures"@en ,
+                             "특정 권역의 역사적인 건조물 및 주변의 유관한 건축/조형물"@ko ;
+              rdfs:label "Architecture"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Bibliography
+:Bibliography rdf:type owl:Class ;
+              dc:description "List of academic research materials"@en ,
+                             "학술적 연구 자료의 목록"@ko ;
+              rdfs:label "Bibliography"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Clothing
+:Clothing rdf:type owl:Class ;
+          dc:description "Costumes, components of costumes, or traditional ornaments"@en ,
+                         "역사적·문화적 복장과 복식 요소들"@ko ;
+          rdfs:label "Clothing"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Concept
+:Concept rdf:type owl:Class ;
+         dc:description "Terms and concepts necessary to explain institutions, rituals, customs, etc."@en ,
+                        "제도, 의례, 풍속 등을 설명하는 데 필요한 용어와 개념"@ko ;
+         rdfs:label "Concept"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Event
+:Event rdf:type owl:Class ;
+       dc:description "Events held in a certain area, ceremonies and events that reproduce them today"@en ,
+                      "특정 권역에서 일어난 사건, 의례 및 이를 재현하는 행사"@ko ;
+       rdfs:label "Event"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Food
+:Food rdf:type owl:Class ;
+      dc:description "Food, ingredients and table setting"@en ,
+                     "음식, 식재료와 상차림"@ko ;
+      rdfs:label "Food"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Heritage
+:Heritage rdf:type owl:Class ;
+          dc:description "Registration information of designated and registered cultural properties"@en ,
+                         "지정문화유산 및 등록문화유산 등록 정보"@ko ;
+          rdfs:label "Heritage"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Index
+:Index rdf:type owl:Class ;
+       dc:description "A list of nodes of similar character. Timeline, collection list, reference list, web resource list, etc."@en ,
+                      "유사한 성격의 노드들을 모아서 묶은 목록. 연표, 소장도서목록, 참고문헌목록, 웹자원목록 등"@ko ;
+       rdfs:label "Index"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Multimedia
+:Multimedia rdf:type owl:Class ;
+            dc:description "3D model of a building; 3D map indicating the location of a specific place; visual materials"@en ,
+                           "3D 모델, 특정 공간의 위치를 알리는 3차원 지도, 시각자료"@ko ;
+            rdfs:label "Multimedia"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Object
+:Object rdf:type owl:Class ;
+        dc:description "Items used in various ceremonies or events; Items or tools that show the culture of the time"@en ,
+                       "각종 의례/행사의 도구, 그 시대의 문화를 보이는 물품들"@ko ;
+        rdfs:label "Object"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Place
+:Place rdf:type owl:Class ;
+       dc:description "Places related to historical events or characters; Places where historical relics or artifacts are located"@en ,
+                      "역사적 배경(사건, 인물)과 관련이 있는 장소. 유물의 소장처"@ko ;
+       rdfs:label "Place"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Record
+:Record rdf:type owl:Class ;
+        dc:description "Records that serve as the source of knowledge such as books, photographs, drawings, and inscriptions"@en ,
+                       "문헌, 사진, 도면, 금석문 등 지식 데이터의 원천 자료가 되는 기록물"@ko ;
+        rdfs:label "Record"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Story
+:Story rdf:type owl:Class ;
+       dc:description "Description of historical knowledge that explains the background of discovering data nodes"@en ,
+                      "데이터 노드 발굴의 배경이 된 역사적 지식에 대한 서술"@ko ;
+       rdfs:label "Story"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Text
+:Text rdf:type owl:Class ;
+      dc:description "Text in the literature that functions as evidence of explanation"@en ,
+                     "설명의 증거 기능을 하는 문헌상의 텍스트"@ko ;
+      rdfs:label "Text"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#WebResource
+:WebResource rdf:type owl:Class ;
+             dc:description "Reference materials that can be accessed on the World Wide Web"@en ,
+                            "월드 와이드 웹에서 접근할 수 있는 참고 자료"@ko ;
+             rdfs:label "WebResource"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#Work
+:Work rdf:type owl:Class ;
+      dc:description "Works of art such as literature, fine arts, music, dance, performance, etc."@en ,
+                     "문학, 미술, 음악, 연희, 무용 등의 문예 작품"@ko ;
+      rdfs:label "Work"@en .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#개념용어
+:개념용어 rdf:type owl:Class ;
+      rdfs:subClassOf :Concept ;
+      rdfs:label "개념용어"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#건축
+:건축 rdf:type owl:Class ;
+    rdfs:subClassOf :Architecture ;
+    rdfs:label "건축"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#건축부품
+:건축부품 rdf:type owl:Class ;
+      rdfs:subClassOf :Architecture ;
+      rdfs:label "건축부품"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#고문헌
+:고문헌 rdf:type owl:Class ;
+     rdfs:subClassOf :Bibliography ;
+     rdfs:label "고문헌"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#고지명
+:고지명 rdf:type owl:Class ;
+     rdfs:subClassOf :Place ;
+     rdfs:label "고지명"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#관서
+:관서 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "관서"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#관직
+:관직 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "관직"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#국가
+:국가 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "국가"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#국보
+:국보 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage ;
+    rdfs:label "국보"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#그림
+:그림 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ,
+                    :WebResource ;
+    rdfs:label "그림"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#근대문헌
+:근대문헌 rdf:type owl:Class ;
+      rdfs:subClassOf :Record ;
+      rdfs:label "근대문헌"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#근대유적지
+:근대유적지 rdf:type owl:Class ;
+       rdfs:subClassOf :Place ;
+       rdfs:label "근대유적지"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#금석문
+:금석문 rdf:type owl:Class ;
+     rdfs:subClassOf :Record ;
+     rdfs:label "금석문"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기관
+:기관 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "기관"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기념물
+:기념물 rdf:type owl:Class ;
+     rdfs:subClassOf :Object ;
+     rdfs:label "기념물"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기사
+:기사 rdf:type owl:Class ;
+    rdfs:subClassOf :Record ;
+    rdfs:label "기사"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#기장
+:기장 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ;
+    rdfs:label "기장"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#논문
+:논문 rdf:type owl:Class ;
+    rdfs:subClassOf :Bibliography ;
+    rdfs:label "논문"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#단체
+:단체 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "단체"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#단행본
+:단행본 rdf:type owl:Class ;
+     rdfs:subClassOf :Bibliography ;
+     rdfs:label "단행본"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#도면
+:도면 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource ;
+    rdfs:label "도면"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#동영상
+:동영상 rdf:type owl:Class ;
+     rdfs:subClassOf :WebResource ;
+     rdfs:label "동영상"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#등록문화재
+:등록문화재 rdf:type owl:Class ;
+       rdfs:subClassOf :Heritage ;
+       rdfs:label "등록문화유산"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#명문銘文
+:명문銘文 rdf:type owl:Class ;
+      rdfs:subClassOf :Text ;
+      rdfs:label "명문(銘文)" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#무용
+:무용 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "무용"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#무형
+:무형 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage ;
+    rdfs:label "무형"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#문학
+:문학 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "문학"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#문헌
+:문헌 rdf:type owl:Class ;
+    rdfs:subClassOf :Record ;
+    rdfs:label "문헌"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#물품
+:물품 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ;
+    rdfs:label "물품"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#뮤지컬
+:뮤지컬 rdf:type owl:Class ;
+     rdfs:subClassOf :Work ;
+     rdfs:label "뮤지컬"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#미술
+:미술 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "미술"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#번역문
+:번역문 rdf:type owl:Class ;
+     rdfs:subClassOf :Text ;
+     rdfs:label "번역문"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#보물
+:보물 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage ;
+    rdfs:label "보물"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#복식
+:복식 rdf:type owl:Class ;
+    rdfs:subClassOf :Clothing ;
+    rdfs:label "복식"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#복장
+:복장 rdf:type owl:Class ;
+    rdfs:subClassOf :Clothing ;
+    rdfs:label "복장"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#분류주제
+:분류주제 rdf:type owl:Class ;
+      rdfs:subClassOf :Concept ;
+      rdfs:label "분류주제"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사건
+:사건 rdf:type owl:Class ;
+    rdfs:subClassOf :Event ;
+    rdfs:label "사건"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사적
+:사적 rdf:type owl:Class ;
+    rdfs:subClassOf :Heritage ;
+    rdfs:label "사적"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#사진
+:사진 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource ;
+    rdfs:label "사진"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#상차림
+:상차림 rdf:type owl:Class ;
+     rdfs:subClassOf :Food ;
+     rdfs:label "상차림"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#소장처
+:소장처 rdf:type owl:Class ;
+     rdfs:subClassOf :Place ;
+     rdfs:label "소장처"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#스토리라인
+:스토리라인 rdf:type owl:Class ;
+       rdfs:subClassOf :Story ;
+       owl:disjointWith :에피소드 ;
+       rdfs:label "스토리라인"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#시각자료
+:시각자료 rdf:type owl:Class ;
+      rdfs:subClassOf :Record ;
+      rdfs:label "시각자료"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#시도문화재
+:시도문화재 rdf:type owl:Class ;
+       rdfs:subClassOf :Heritage ;
+       rdfs:label "시도문화유산"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#식재료
+:식재료 rdf:type owl:Class ;
+     rdfs:subClassOf :Food ;
+     rdfs:label "식재료"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#에피소드
+:에피소드 rdf:type owl:Class ;
+      rdfs:subClassOf :Story ;
+      rdfs:label "에피소드"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#연극
+:연극 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "연극"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#영화
+:영화 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "영화"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#원문
+:원문 rdf:type owl:Class ;
+    rdfs:subClassOf :Text ,
+                    :WebResource ;
+    rdfs:label "원문"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#웹자원색인
+:웹자원색인 rdf:type owl:Class ;
+       rdfs:subClassOf :Index ;
+       rdfs:label "웹자원색인"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#유적지
+:유적지 rdf:type owl:Class ;
+     rdfs:subClassOf :Place ;
+     rdfs:label "유적지"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#음식
+:음식 rdf:type owl:Class ;
+    rdfs:subClassOf :Food ;
+    rdfs:label "음식"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#음악
+:음악 rdf:type owl:Class ;
+    rdfs:subClassOf :Work ;
+    rdfs:label "음악"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#의례
+:의례 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "의례"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#인물
+:인물 rdf:type owl:Class ;
+    rdfs:subClassOf :Actor ;
+    rdfs:label "인물"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#인물군
+:인물군 rdf:type owl:Class ;
+     rdfs:subClassOf :Actor ;
+     rdfs:label "인물군"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#자연지명
+:자연지명 rdf:type owl:Class ;
+      rdfs:subClassOf :Place ;
+      rdfs:label "자연지명"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#장소
+:장소 rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "장소"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#전시
+:전시 rdf:type owl:Class ;
+    rdfs:subClassOf :Event ;
+    rdfs:label "전시"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#제도
+:제도 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "제도"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#제수
+:제수 rdf:type owl:Class ;
+    rdfs:subClassOf :Food ;
+    rdfs:label "제수"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#조형
+:조형 rdf:type owl:Class ;
+    rdfs:subClassOf :Architecture ;
+    rdfs:label "조형"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#지도
+:지도 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource ;
+    rdfs:label "지도"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#직역
+:직역 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "직역"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#참고
+:참고 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource ;
+    rdfs:label "참고"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#참고문헌색인
+:참고문헌색인 rdf:type owl:Class ;
+        rdfs:subClassOf :Index ;
+        rdfs:label "참고문헌색인"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#탑본
+:탑본 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ;
+    rdfs:label "탑본"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#해설
+:해설 rdf:type owl:Class ;
+    rdfs:subClassOf :WebResource ;
+    rdfs:label "해설"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#행사
+:행사 rdf:type owl:Class ;
+    rdfs:subClassOf :Event ;
+    rdfs:label "행사"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#행정지명
+:행정지명 rdf:type owl:Class ;
+      rdfs:subClassOf :Place ;
+      rdfs:label "행정지명"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#현대문헌
+:현대문헌 rdf:type owl:Class ;
+      rdfs:subClassOf :Record ;
+      rdfs:label "현대문헌"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#현판
+:현판 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ;
+    rdfs:label "현판"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#호칭
+:호칭 rdf:type owl:Class ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "호칭"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#화폐
+:화폐 rdf:type owl:Class ;
+    rdfs:subClassOf :Object ;
+    rdfs:label "화폐"@ko .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_모델
+<http://dh.aks.ac.kr/ontologies/ekc#3D_모델> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Multimedia ;
+                                           rdfs:label "3D_모델" .
+
+
+###  http://dh.aks.ac.kr/ontologies/ekc#3D_지도
+<http://dh.aks.ac.kr/ontologies/ekc#3D_지도> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Multimedia ;
+                                           rdfs:label "3D_지도" .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+voaf:Vocabulary rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dh.aks.ac.kr/ontologies/ekc#
+: rdf:type owl:NamedIndividual ,
+           voaf:Vocabulary .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
