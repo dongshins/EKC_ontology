@@ -85,7 +85,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - Legacy terms remain resolvable for compatibility, but are not maintained.
 -->
 ### Documentation 
-- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions)
+- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously expanded via incremental addenda)
 <!--
 ### Documentation 
 - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions)
@@ -120,7 +120,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 [: compare 링크(태그A...태그B) ] 
 --> 
 ### Documentation 
-- **Detailed dossier:** `docs/releases/v2022-alpha2507.md` (continuously updated with incremental additions) 
+- **Detailed dossier:** `docs/releases/v2022-alpha2507.md` (continuously expanded via incremental addenda) 
 
 ### References
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
