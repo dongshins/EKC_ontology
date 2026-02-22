@@ -84,9 +84,15 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - See `docs/migration-2022a2507-to-2025.md`.
 - Legacy terms remain resolvable for compatibility, but are not maintained.
 -->
-### References
-- **Details:** docs/changes/v2025.0.0-ontology-revision.md
-
+### Documentation 
+- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions)
+<!--
+### Documentation 
+- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions)
+--> 
+<!--//### References
+//- **Details:** docs/changes/v2025.0.0-ontology-revision.md
+-->
 ### Links
 - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0
 - Compare: https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0
@@ -113,8 +119,10 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 **Diff:** https://github.com/dongshins/EKC_ontology/compare/v2022.%CE%B12507...v2022-alpha2507
 [: compare 링크(태그A...태그B) ] 
 --> 
+### Documentation 
+- **Detailed dossier:** `docs/releases/v2022-alpha2507.md` (continuously updated with incremental additions) 
+
 ### References
-- **Details:** docs/releases/v2022-alpha2507.md 
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
 
