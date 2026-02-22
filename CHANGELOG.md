@@ -99,7 +99,19 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 <!-- - **Registry milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** to improve global discoverability and reuse in the Linked Data ecosystem.--> 
 <!-- - **Korean Studies milestone (LOV):** Registered EKC in **Linked Open Vocabularies (LOV)** (added 2025-08-03), improving global discoverability and reuse.--> 
 <!-- - **Community note:** (To our knowledge) among the earliest LOV registrations of a Korean Studies–focused vocabulary.-->
+### Changed — Ontology documentation re-encoded (Wiki → Turtle) with standards/consistency review
+- Re-encoded wiki-style ontology documentation into RDF 1.1 Turtle and normalized serialization.
+- Reviewed and revised ontology header/versioning (ontology IRI, versionIRI, imports, metadata).
+- Harmonized IRIs, labels, and annotations; clarified definitions and provenance notes.
+- Strengthened OWL modeling consistency (typing, domain/range, disjointness/equivalence, restrictions) and removed contradictions.
+- Migration notes: 일부 용어 IRI/라벨 정비로 SPARQL 패턴 수정 필요. 상세는 아래 문서 참조.
+<!--
+**Details:** docs/changes/v2022-alpha2507-ontology-revision.md  
+**Diff:** https://github.com/dongshins/EKC_ontology/compare/v2022.%CE%B12507...v2022-alpha2507
+[: compare 링크(태그A...태그B) ] 
+--> 
 ### References
+- **Details:** docs/changes/v2022-alpha2507.md 
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
 
