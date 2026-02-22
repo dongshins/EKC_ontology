@@ -114,7 +114,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 [: compare 링크(태그A...태그B) ] 
 --> 
 ### References
-- **Details:** docs/changes/v2022-alpha2507.md 
+- **Details:** docs/releases/v2022-alpha2507.md 
 - Wiki documentation (EKC 2022): https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
 
