@@ -42,7 +42,7 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 ### Overview
 EKC 2025는 EKC 온톨로지를 “버전 고정·인용 가능(citable)한 OWL/RDF 배포물”로 정식화하기 위해,
 온톨로지 헤더(발행 메타데이터/버전 계통)를 강화한 릴리즈이다.
-(스키마의 Class/ObjectProperty 구성은 EKC 2022.α2507과 호환 범위 내에서 유지됨.)
+(스키마의 Class/ObjectProperty 구성은 EKC 2022.α2507과 호환 범위 내에서 유지됨.) @ko 
 <!--EKC 2025 completes a versioned, citable release workflow for the EKC ontology.
 It builds on the standards-based RDF/OWL distribution and LOV registration milestone established in EKC 2022.α2507,
 and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for reproducible reuse.
