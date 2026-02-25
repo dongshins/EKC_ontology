@@ -71,6 +71,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
   - `rdfs:comment`(EN) 확장(프로젝트 설명/범위 명시)
 - Consistency:
   - 위 메타데이터 용어들을 `owl:AnnotationProperty`로 명시(헤더/주석 체계 정합성)
+- **상세사항은 아래 Documentation 참조**.
 <!--### Changed
 - Publication metadata improved (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
 - Packaging/documentation improved to support stable scholarly citation and reproducibility.
@@ -144,7 +145,9 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - Reviewed and revised ontology header/versioning (ontology IRI, versionIRI, imports, metadata).
 - Harmonized IRIs, labels, and annotations; clarified definitions and provenance notes.
 - Strengthened OWL modeling consistency (typing, domain/range, disjointness/equivalence, restrictions) and removed contradictions.
-- Migration notes: 일부 용어 IRI/라벨 정비로 SPARQL 패턴 수정 필요. 상세는 아래 문서 참조.
+- Migration notes: 일부 용어 IRI/라벨 정비로 SPARQL 패턴 수정 필요.
+- **상세사항은 아래 Documentation 참조**.
+<!-- - Migration notes: 일부 용어 IRI/라벨 정비로 SPARQL 패턴 수정 필요. 상세는 아래 문서 참조.--> 
 <!--
 **Details:** docs/changes/v2022-alpha2507-ontology-revision.md  
 **Diff:** https://github.com/dongshins/EKC_ontology/compare/v2022.%CE%B12507...v2022-alpha2507
