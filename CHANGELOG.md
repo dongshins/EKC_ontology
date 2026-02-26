@@ -125,7 +125,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 -->
 ### Links
 - Release: [EKC 2025 [v2025.0.0] – Major Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0) 
-- Compare: [`v2022-alpha2507...v2025.0.0`[(https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0)
+- Compare: [`v2022-alpha2507...v2025.0.0`](https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0)
 <!-- - Release: TBD (To Be Determined; 추후 결정. Release 생성 후 링크로 교체) --> 
 <!-- - Release: TBD (Release 생성 후 링크로 교체)--> 
 <!-- - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0-->
