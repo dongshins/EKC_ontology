@@ -124,8 +124,9 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 //- **Details:** docs/changes/v2025.0.0-ontology-revision.md
 -->
 ### Links
-- Release: TBD (Release 생성 후 링크로 교체)
+- Release: TBD (To Be Determined; 추후 결정. Release 생성 후 링크로 교체)
 - Compare: TBD (예: `v2022-alpha2507...v2025.0.0`)
+<!-- - Release: TBD (Release 생성 후 링크로 교체)--> 
 <!-- - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0-->
 <!-- - Compare: https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0-->
 
