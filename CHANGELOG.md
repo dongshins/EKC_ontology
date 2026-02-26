@@ -165,7 +165,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - LOV entry (ekc): https://lov.linkeddata.es/dataset/lov/vocabs/ekc
 
 ### Links
-- Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2022-alpha2507
+- Release: [EKC Ontology v2022.α2507 using Protégé](https://github.com/dongshins/EKC_ontology/releases/tag/v2022-alpha2507)
 
 ### Notes
 - This version is archived and no longer maintained.
