@@ -72,7 +72,7 @@ Since its inception, the ontology has been improved and maintained **through var
 
 The version of the ontology **created in OWL using Protégé** and **serialized in Turtle format** was solely composed and maintained by:
 
-**Dong Shin SEO**  
+**Dong Shin SEO** (서동신, Protégé를 활용한 전체 EKC 온톨로지의 W3C 웹표준 코드화와 업그레이드 및 유지관리 수행 @ko)
 - Researcher, Center for Digital Humanities, Academy of Korean Studies  
 - IT Expert Adviser, Division of Information Development, Academy of Korean Studies
 - Wikidata: [Q52661852](https://www.wikidata.org/wiki/Q52661852)
