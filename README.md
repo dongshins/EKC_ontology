@@ -72,7 +72,7 @@ legacy dataset compatibility, and stable scholarly citation.
 
 - 구체적인 내역은 **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**를 참고하세요.
 
-  *See the full list and **roles** in **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**.
+  *See the full list and **roles** in **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**.*
 
 The EKC Ontology was initially developed during **collaborative efforts** at **the Academy of Korean Studies**, under the guidance of **Professor Hyeon KIM**. The early modeling team included **over ten researchers** (among the people above) who contributed to the conceptual framework and design.
 
