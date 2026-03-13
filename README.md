@@ -70,7 +70,9 @@ legacy dataset compatibility, and stable scholarly citation.
 
   *The ordering of names is a **rough** reflection of overall contributions to EKC ontology design and development from project inception to the present. Because contributions take many forms and are hard to quantify objectively, the order may be **approximate**; corrections are welcome via Issues/PRs.* @en
 
-- See the full list and **roles** in **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**.
+- 구체적인 내역은 **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**를 참고하세요.
+
+  *See the full list and **roles** in **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**.
 
 The EKC Ontology was initially developed during **collaborative efforts** at **the Academy of Korean Studies**, under the guidance of **Professor Hyeon KIM**. The early modeling team included **over ten researchers** (among the people above) who contributed to the conceptual framework and design.
 
