@@ -12,3 +12,5 @@
 - **Rationale (ordering criterion)**: The names are listed in a **rough order** based on overall contributions to EKC ontology **design and development** from the start of the project to the present.
 - **Possible uncertainty**: Contributions span diverse forms (e.g., code, modeling, documentation, review, evaluation, coordination), making **objective quantification difficult**; therefore, the ordering may involve **some uncertainty** depending on available evidence and individual perspectives.
 - **Corrections / additions**: If you find omissions or need updates to roles or ordering, please suggest changes via an Issue or Pull Request for review.
+
+<!--(서동신; Protégé를 활용한 전체 EKC 온톨로지의 W3C 웹표준 코드화, 업그레이드, 글로벌 레지스트리 등록 및 유지관리 수행 @ko)-->
