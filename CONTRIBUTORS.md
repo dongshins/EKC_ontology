@@ -6,7 +6,7 @@
 ### 명단 표기 순서(근거) 및 오차 가능성 안내 @ko
 - **근거(정렬 기준)**: 본 명단의 나열 순서는 디지털인문학연구소에서 EKC 온톨로지 작성을 시작한 시점부터 현재까지, EKC 온톨로지의 **설계·개발에 대한 기여도**를 종합하여 작성한 **대략적 순서**입니다.
 - **오차 가능성**: 기여는 코드/모델링/문서화/검수/심의/운영 등 다양한 형태로 이루어져 **객관적 정량 비교가 어렵고**, 개인별 인지·평가 및 입증 가능한 자료의 범위에 따라 **순서에 불확실성**이 있을 수 있습니다.
-- **정정/추가**: 누락 또는 역할/순서 정정이 필요하면 Issue 또는 PR로 제안해 주시면 검토 후 반영합니다.
+- **정정/추가**: 누락 또는 역할/순서 정정이 필요하면 Issue 또는 PR로 제안해 주시면 검토 후 반영하겠습니다.
 
 ### Note on ordering and possible uncertainty @en
 - **Rationale (ordering criterion)**: The names are listed in a **rough order** based on overall contributions to EKC ontology **design and development** from the start of the project to the present.
