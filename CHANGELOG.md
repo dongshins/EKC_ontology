@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 This project follows:
 - Year label for scholarly communication (e.g., "EKC 2025")
 - Semantic Versioning (SemVer) for releases (e.g., v2025.0.0)
+
+## Evidence for ontology-header dates / 온톨로지 헤더 날짜의 공개 근거(검증 경로)
+
+- (KR) 본 CHANGELOG의 각 릴리즈 제목 줄에 쓰인 “Primary 날짜(YYYY-MM-DD)”는, 해당 버전 TTL의 ontology header에 기록된 `dcterms:issued`/`dcterms:modified` 값(= export timestamp)을 기준으로 한다.
+- (EN) The “Primary date” in each release header is derived from `dcterms:issued`/`dcterms:modified` in the TTL ontology header.
+
+- (KR) 위 날짜의 **공개된 근거(원문 TTL/스냅샷)는** 아래 폴더에서 확인 가능:
+  - `./version_history/`  (link: [./version_history/](./version_history/))
+  - `./snapshots/`       (link: [./snapshots/](./snapshots/))
+- (EN) Public evidence (raw TTL snapshots) is available under:
+  - `./version_history/` (link: [./version_history/](./version_history/))
+  - `./snapshots/`       (link: [./snapshots/](./snapshots/))
+
+- (KR/EN) How to verify: open the relevant TTL snapshot and search for `dcterms:issued` and `dcterms:modified`.
 <!--  
 ## [Unreleased]
 ### Breaking Changes
