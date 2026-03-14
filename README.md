@@ -30,7 +30,6 @@ This version is preserved for reproducibility,
 legacy dataset compatibility, and stable scholarly citation.
 
 ## Key Classes
-
 - `ekc:Actor`: Historical figures; Organizations as collective actors and institutions as operating entities  
 - `ekc:Event`: Events held in a certain area, ceremonies and events that reproduce them today  
 - `ekc:Place`: Places related to historical events or characters; Places where historical relics or artifacts are located  
@@ -50,14 +49,21 @@ legacy dataset compatibility, and stable scholarly citation.
 - `ekc:Index`: A list of nodes of similar character. Timeline, collection list, reference list, web resource list, etc.  
 
 ## Technical Details
-
 - Format: Turtle (.ttl), OWL 2
 - Accessible at: raw URL
 - Version history: EKC 1.0 → EKC 1.1 → EKC 2022 → EKC 2022.α2507 → EKC 2025 
 - License: Creative Commons Attribution‑ShareAlike 4.0 International (CC BY‑SA 4.0)
 
-## Links
+### Standards & Reference Models (Addendum) / 표준·참조모델 부기(附記)
+- CIDOC CRM (ISO 21127:2023; corresponds to CIDOC CRM community version 7.1.3) @en  
+  *CIDOC CRM was consulted as a conceptual reference during early EKC modeling (2016–2017). However, due to the project’s namespace policy, readability, and internal terminology system, this repository does **not** import CIDOC CRM nor reuse the `crm:` prefix. Unless explicitly stated, references are conceptual and do **not** imply formal compliance or full alignment.* @en  
+  (Ref: https://cidoc-crm.org/Event/iso-211272023-has-been-released , https://cidoc-crm.org/Version/version-7.1.3) @en
 
+- CIDOC-CRM(ISO 21127:2023; CIDOC-CRM 커뮤니티 버전 7.1.3 대응) @ko  
+  *CIDOC-CRM은 EKC 온톨로지 초기 모델링(2016–2017) 과정에서 개념적·방법론적 참고로 활용되었습니다. 다만 프로젝트의 네임스페이스 정책/가독성/내부 용어체계에 따라, 본 레포는 CIDOC-CRM을 **import**하거나 `crm:` 프리픽스를 **직접 재사용하지 않습니다**. 명시적으로 선언된 경우를 제외하면, 여기서의 ‘참고’는 개념적 참조이며 CIDOC-CRM에 대한 공식적 준수/완전 정합을 의미하지 않습니다.* @ko  
+  (참고: https://cidoc-crm.org/Event/iso-211272023-has-been-released , https://cidoc-crm.org/Version/version-7.1.3) @ko
+
+## Links
 - Ontology file: [ekc_ontology.ttl](./ekc_ontology.ttl)  
 - Version history: [version_history/](./version_history)  
 - Publication: [EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)](https://lov.linkeddata.es/dataset/lov/vocabs/ekc)(LOV registration)
@@ -78,9 +84,7 @@ The EKC Ontology was initially developed during **collaborative efforts** at **t
 
 Since its inception, the ontology has been improved and maintained **through various projects** in the field of digital humanities.
 
-The version of the ontology **created in OWL using Protégé** and **serialized in Turtle format** was solely composed and maintained by:
-
-**Dong Shin SEO** 
+The version of the ontology **created in OWL using Protégé** and **serialized in Turtle format** was solely composed and maintained by: **Dong Shin SEO** 
 - Researcher, Center for Digital Humanities, Academy of Korean Studies  
 - IT Expert Adviser, Division of Information Development, Academy of Korean Studies
 - Wikidata: [Q52661852](https://www.wikidata.org/wiki/Q52661852)
