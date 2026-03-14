@@ -80,7 +80,7 @@ Unless explicitly stated, such references are conceptual only and do **not** imp
 
 ## Credits
 
-The EKC Ontology was initially developed through **collaborative work** at **the Academy of Korean Studies** under the guidance of **Professor Hyeon KIM (김현 @ko)**](http://www.xuanflute.com/).
+The EKC Ontology was initially developed through **collaborative work** at **the Academy of Korean Studies** under the guidance of [**Professor Hyeon KIM (김현 @ko)**](http://www.xuanflute.com/).
 
 For the **full contributor list and roles**, see [**CONTRIBUTORS**.md](./CONTRIBUTORS.md).
 
