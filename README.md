@@ -66,10 +66,10 @@ legacy dataset compatibility, and stable scholarly citation.
 
 - 김현, 서동신, 강혜원, 류인태, 서소리, 김지선, 김사현, 장동룡, 김바로, 김누리, 김미정, 이혜영, 차서연, 장원석, 이창섭, 김선미, 김현규, 최한샘, 김아람, 김병준, 김현종 @ko
 
-  *명단 표기 순서는 디지털인문학연구소의 EKC 온톨로지 설계·개발 전 기간(착수~현재)에서의 기여를 바탕으로 한 **대략적 순서**입니다. 기여 형태가 다양하고 객관적 정량화가 어려워 일부 **오차 가능성**이 있으며, 정정 제안은 Issue/PR로 환영합니다.* @ko  
+<!--  *명단 표기 순서는 디지털인문학연구소의 EKC 온톨로지 설계·개발 전 기간(착수~현재)에서의 기여를 바탕으로 한 **대략적 순서**입니다. 기여 형태가 다양하고 객관적 정량화가 어려워 일부 **오차 가능성**이 있으며, 정정 제안은 Issue/PR로 환영합니다.* @ko  
 
   *The ordering of names is a **rough** reflection of overall contributions to EKC ontology design and development from project inception to the present. Because contributions take many forms and are hard to quantify objectively, the order may be **approximate**; corrections are welcome via Issues/PRs.* @en
-
+-->
 - 구체적인 내역은 [CONTRIBUTORS.md](./CONTRIBUTORS.md)를 참고해 주십시오.
 
   *See the full list and **roles** in **[CONTRIBUTORS.md](./CONTRIBUTORS.md)**.*
