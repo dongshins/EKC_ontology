@@ -4,7 +4,7 @@ EKC Data Model Ontology is a domain-specific vocabulary for modeling entities an
 <!--Initially developed during the Encyclopedic Archives of Korean Culture digitization project at the Academy of Korean Studies and refined through various digital humanities projects.
 
 It has been **developed** since 2016 under [**the Center for Digital Humanities** in **the Academy of Korean Studies**](https://dh.aks.ac.kr/).-->
-It has been **developed** since 2016 under [**the Center for Digital Humanities** in **the Academy of Korean Studies**](https://dh.aks.ac.kr/) in connection with the Encyclopedic Archives of Korean Culture (EKC) and refined through various digital humanities projects there. 
+It has been **developed** since 2016 during the Encyclopedic Archives of Korean Culture digitization project at [**the Center for Digital Humanities** in **the Academy of Korean Studies**](https://dh.aks.ac.kr/) and refined through various digital humanities projects there. 
 
 Namespace: `http://dh.aks.ac.kr/ontologies/ekc#`
 
