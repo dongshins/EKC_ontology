@@ -13,4 +13,12 @@
 - **Possible uncertainty**: Contributions span diverse forms (e.g., code, modeling, documentation, review, evaluation, coordination), making **objective quantification difficult**; therefore, the ordering may involve **some uncertainty** depending on available evidence and individual perspectives.
 - **Corrections / additions**: If you find omissions or need updates to roles or ordering, please suggest changes via an Issue or Pull Request for review.
 
+### 기여 내역 개관 @ko
+- 관계어(relation, object property)
+  * 기본 구상 제시, 지도, 확정: 김현 교수님
+  * 외부 스키마(vocabulary)의 참조 대상 확인 및 후보 추천: 강혜원, 서동신 위주
+  * 활용된 외부 스키마 : owl, dcterms, edm, foaf 
+			※ CIDOC-CRM 및 CBDB의 경우, 해당 표현을 참고하되 표현형식의 차이 때문에 접두어는 'ekc:'를 사용하기로 결정 
+- 클래스 구성
+- [Ontology:EKC 2022](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022) 스키마의 레이아웃 도출 과정 
 <!--(서동신; Protégé를 활용한 전체 EKC 온톨로지의 W3C 웹표준 코드화, 업그레이드, 글로벌 레지스트리 등록 및 유지관리 수행 @ko)-->
