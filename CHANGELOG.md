@@ -51,11 +51,30 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 
 ---
 -->
-## EKC 2025 [v2025.1.0] — 2026-03-13 (Minor Release)
+## EKC 2025 [v2025.1.0] — 2026-03-13 (Patch: linking/mapping + metadata policy)
 
 - Revised ontology documentation and release documentation for the EKC 2025 line.
 - Updated repository metadata and release preparation materials for GitHub and Zenodo.
 - Refined explanatory texts concerning ontology structure, documentation policy, and versioned release handling.
+
+### Overview
+EKC 2025 [v2025.1.0]은 EKC 2025 [v2025.0.0]의 핵심 스키마 구조를 유지하면서,
+(1) ontology header 메타데이터를 정규화하고,
+(2) 외부 링크/매핑(`owl:sameAs` vs `skos:*Match`)의 사용 규칙을 명문화하며,
+(3) `dc:*`와 `dcterms:*` 메타데이터 프로퍼티의 운용 원칙을 보강한 패치 릴리즈이다. @ko
+
+### Changed — Ontology header / publication metadata
+- `owl:versionInfo` updated to `EKC 2025 [v2025.1.0]`.
+- `dcterms:issued` normalized to the release date basis.
+- `dcterms:modified` updated to reflect the v2025.1.0 patch date.
+- `owl:priorVersion` IRI normalized for consistency.
+- Added `dc:publisher` (EN/KO literals) and `dcat:contactPoint`.
+- The ontology-header literal list formerly recorded in `dcterms:contributor` was removed. @ko
+
+### Changed — Linking / mapping guidance
+- Clarified the strict use of `owl:sameAs` for identity-level equivalence only.
+- Added/curated `skos:mappingRelation`, `skos:exactMatch`, and `skos:closeMatch` for external vocabulary alignment.
+- Clarified the policy that `dcterms:*` is used for **resource-valued** metadata, while `dc:*` is used for **annotation-style literal/IRI text**. @ko
 
 ### Versioning clarification
 
@@ -65,12 +84,22 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 - `dcterms:replaces` → `http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507`
 - `owl:priorVersion` → `http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507`
 
+### Compatibility
+- No changes to the core class set.
+- No datatype-property changes.
+- Existing data/queries should remain broadly compatible unless they depend on ontology-header literals or exact header IRI forms. 
+
+### Migration Notes
+- If any pipeline relied on ontology-header `dcterms:contributor` literal values, update it to refer to repository documentation (`README.md`, `CONTRIBUTORS.md`) instead. 
+- If any rule depended on exact `http`/`https` distinction in version lineage IRIs, review that logic. 
+
 ### Documentation 
-- **Detailed dossier:** [`docs/changes/v2025.1.0-ontology-revision.md`](https://github.com/dongshins/EKC_ontology/docs/changes/v2025.1.0-ontology-revision.md) (**continuously updated with incremental additions**) 
+- **Detailed dossier:** [`docs/changes/v2025.1.0-ontology-revision.md`](https://github.com/dongshins/EKC_ontology/docs/changes/v2025.1.0-ontology-revision.md) <!--(**continuously updated with incremental additions**)--> 
 
 ### Links
-- Release: TBD (Release 생성 후 링크로 교체); [EKC 2025 [v2025.1.0] – Minor Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0) 
-- Compare: TBD; [`v2025.0.0...v2025.1.0`](https://github.com/dongshins/EKC_ontology/compare/v2025.0.0...v2025.1.0)
+- Release: [`v2025.1.0`](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0) 
+- Compare: [`v2025.0.0...v2025.1.0`](https://github.com/dongshins/EKC_ontology/compare/v2025.0.0...v2025.1.0)
+<!-- - Release: TBD (Release 생성 후 링크로 교체); [EKC 2025 [v2025.1.0] – Minor Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0) -->
 <!-- - Release: TBD (To Be Determined; 추후 결정. Release 생성 후 링크로 교체) --> 
 <!-- - Release: TBD (Release 생성 후 링크로 교체)--> 
 <!-- - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0-->
