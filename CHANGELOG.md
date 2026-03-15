@@ -66,10 +66,10 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 - `owl:priorVersion` → `http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507`
 
 ### Documentation 
-- **Detailed dossier:** `docs/changes/v2025.1.0-ontology-revision.md` (**continuously updated with incremental additions**) 
+- **Detailed dossier:** [`docs/changes/v2025.1.0-ontology-revision.md`](https://github.com/dongshins/EKC_ontology/docs/changes/v2025.1.0-ontology-revision.md) (**continuously updated with incremental additions**) 
 
 ### Links
-- Release: TBD (Release 생성 후 링크로 교체); [EKC 2025 [v2025.0.0] – Major Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0) 
+- Release: TBD (Release 생성 후 링크로 교체); [EKC 2025 [v2025.1.0] – Minor Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0) 
 - Compare: TBD; [`v2025.0.0...v2025.1.0`](https://github.com/dongshins/EKC_ontology/compare/v2025.0.0...v2025.1.0)
 <!-- - Release: TBD (To Be Determined; 추후 결정. Release 생성 후 링크로 교체) --> 
 <!-- - Release: TBD (Release 생성 후 링크로 교체)--> 
@@ -158,7 +158,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 - Legacy terms remain resolvable for compatibility, but are not maintained.
 -->
 ### Documentation 
-- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (**continuously updated with incremental additions**) 
+- **Detailed dossier:** [`docs/changes/v2025.0.0-ontology-revision.md`](https://github.com/dongshins/EKC_ontology/docs/changes/v2025.0.0-ontology-revision.md) (**continuously updated with incremental additions**) 
 <!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously expanded via incremental addenda)--> 
 <!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md`--> 
 <!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions) --> 
