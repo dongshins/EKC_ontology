@@ -61,15 +61,22 @@ The present repository provides the ontology in OWL using Protégé and in Turtl
 - `ekc:Index`
 
 ## Technical Notes
-
+<!-- - **Accessible at:** [raw URL](https://github.com/dongshins/EKC_ontology/blob/main/ekc_ontology.ttl)-->
 - **Version history:** EKC 1.0 → EKC 1.1 → EKC 2022 → EKC 2022.α2507 → EKC 2025
 - **Primary ontology file:** [ekc_ontology.ttl](./ekc_ontology.ttl)
 - **Version archive:** [version_history/](./version_history)
 
+### Linking & metadata policy note (v2025.1.0) / 링크·메타데이터 운용 부기(附記)
+- `owl:sameAs`는 **엄격한 동일개체(identity)** 에 한해 사용하도록 지침을 명확히 했습니다. @ko
+- 외부 어휘/개념체계와의 대응에는 `skos:mappingRelation`, `skos:exactMatch`, `skos:closeMatch`를 구분하여 사용하도록 정비했습니다. @ko
+- `creator / contributor / publisher` 계열 메타데이터는, **개체(resource)를 대상으로 할 때는 `dcterms:*`**, **문자열·IRI 텍스트 등 annotation 성격일 때는 `dc:*`** 를 사용한다는 운용 원칙을 명시했습니다. @ko
+- See details in: [docs/changes/v2025.1.0-ontology-revision.md](./docs/changes/v2025.1.0-ontology-revision.md) @en
+
 ### Standards & Reference Models (Addendum) / 표준·참조모델 부기(附記)
 
-CIDOC CRM and CBDB were consulted as conceptual references during early EKC modeling. However, due to the project’s namespace policy, readability considerations, and internal terminology system, this repository does **not** import CIDOC CRM and CBDB nor directly reuse the `crm:`, `cbdb:`, `shlib:` prefixes.
-
+CIDOC CRM (ISO 21127:2023; corresponds to CIDOC CRM community version 7.1.3) and CBDB were consulted as conceptual references during early EKC modeling. However, due to the project’s namespace policy, readability considerations, and internal terminology system, this repository does **not** import CIDOC CRM and CBDB nor directly reuse the `crm:`, `cbdb:`, `shlib:` prefixes.
+<!--*CIDOC-CRM은 EKC 온톨로지 초기 모델링(2016–2017) 과정에서 개념적·방법론적 참고로 활용되었습니다. 다만 프로젝트의 네임스페이스 정책/가독성/내부 용어체계에 따라, 본 레포는 CIDOC-CRM을 **import**하거나 `crm:` 프리픽스를 **직접 재사용하지 않습니다**. 명시적으로 선언된 경우를 제외하면, 여기서의 ‘참고’는 개념적 참조이며 CIDOC-CRM에 대한 공식적 준수/완전 정합을 의미하지 않습니다.* @ko
+-->
 Unless explicitly stated, such references are conceptual only and do **not** imply formal compliance or full alignment.
 
 ## Links
