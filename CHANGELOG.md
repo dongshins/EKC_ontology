@@ -42,15 +42,16 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 - (planned) Alignment to additional external vocabularies.
 ### Changed
 - (planned) Improve documentation and examples.
+<!--
 ### Deprecated
 - (planned) Some legacy terms to be deprecated.
 ### Removed
 - (planned) Terms to be removed after deprecation period.
 ### Fixed
 - (planned) Validation fixes based on SHACL checks.
-
----
 -->
+---
+
 ## EKC 2025 [v2025.1.0] — 2026-03-13 (Patch: linking/mapping + metadata policy)
 
 - Revised ontology documentation and release documentation for the EKC 2025 line.
