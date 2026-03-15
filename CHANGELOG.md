@@ -204,6 +204,13 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 <!-- - Compare: TBD (예: `v2022-alpha2507...v2025.0.0`)-->
 <!-- - Compare: https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0-->
 
+### Notes
+- Preserved for reproducibility and stable scholarly citation.
+<!-- 
+- This version is archived and no longer maintained.
+- The label "EKC 2022.α2507" denotes the 2022-series snapshot; the GitHub archiving/release record was created on 2025-07-27.
+- Preserved for reproducibility, legacy dataset compatibility, and stable scholarly citation.
+-->
 ---
 
 ## EKC 2022.α2507 [v2022-alpha2507] — 2025-07-27 (Archived)
