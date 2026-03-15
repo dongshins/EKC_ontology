@@ -68,7 +68,7 @@ The present repository provides the ontology in OWL using Protégé and in Turtl
 
 ### Standards & Reference Models (Addendum) / 표준·참조모델 부기(附記)
 
-CIDOC CRM and CBDB were consulted as conceptual references during early EKC modeling. However, due to the project’s namespace policy, readability considerations, and internal terminology system, this repository does **not** import CIDOC CRM and CBDB nor directly reuse the `crm:` and `shlib:` prefixes.
+CIDOC CRM and CBDB were consulted as conceptual references during early EKC modeling. However, due to the project’s namespace policy, readability considerations, and internal terminology system, this repository does **not** import CIDOC CRM and CBDB nor directly reuse the `crm:`, `cbdb:`, `shlib:` prefixes.
 
 Unless explicitly stated, such references are conceptual only and do **not** imply formal compliance or full alignment.
 
