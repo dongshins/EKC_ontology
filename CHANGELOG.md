@@ -51,95 +51,26 @@ If your dataset uses EKC 2022.α2507, apply the following mapping:
 
 ---
 -->
-## EKC 2025 [v2025.1.0] — 2026-03-13 (Minor Release, Archived)
+## EKC 2025 [v2025.1.0] — 2026-03-13 (Minor Release)
 
-### Overview
-EKC 2025는 EKC 온톨로지를 “버전 고정·인용 가능(citable)한 OWL/RDF 배포물”로 정식화하기 위해,
-온톨로지 헤더(발행 메타데이터/버전 계통)를 강화한 릴리즈이다.
-(스키마의 Class/ObjectProperty 구성은 EKC 2022.α2507과 호환 범위 내에서 유지됨.) @ko 
-<!--EKC 2025 completes a versioned, citable release workflow for the EKC ontology.
-It builds on the standards-based RDF/OWL distribution and LOV registration milestone established in EKC 2022.α2507,
-and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for reproducible reuse.
---> 
-<!--
-### Added
-- SHACL shapes: `ekc-shapes.ttl` for core constraints.
-- Wikidata alignment annotations (`schema:sameAs` / `wdt:*` mapping notes).
-- Multilingual labels (ko/en) expanded for key classes and properties.
-- New documentation: `docs/migration-2022a2507-to-2025.md`.
--->
-### Changed — Ontology header / publication metadata (첨부 TTL 비교 근거)
-- Explicit versioning added/curated:
-  - `owl:versionIRI` (version IRI 고정)
-  - `owl:priorVersion` (이전 버전 명시)
-  - `owl:versionInfo` ("EKC 2025")
-- Publication & provenance fields added/updated:
-  - `dcterms:issued`, `dcterms:modified` (릴리즈 시각으로 정규화)
-  - `dcterms:publisher`, `dcterms:license` (라이선스/발행 주체 명시)
-  - `dcterms:replaces` (대상 교체 버전 명시)
-- Credits & citation readiness:
-  - `dcterms:contributor`에 기여자(21명) literal 목록을 반영
-  - `dc:creator`에 기관 IRI + 다국어 literal 병기(출판 메타데이터 일관성)
-  - `dc:title`(EN/KO) 정비(학술 인용용 타이틀)
-- Documentation string improved:
-  - `rdfs:comment`(EN) 확장(프로젝트 설명/범위 명시)
-- Consistency:
-  - 위 메타데이터 용어들을 `owl:AnnotationProperty`로 명시(헤더/주석 체계 정합성)
-- **상세사항은 아래 Documentation 참조**.
-<!--### Changed
-- Publication metadata improved (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
-- Packaging/documentation improved to support stable scholarly citation and reproducibility.
--->
-<!--
-- Reorganized class hierarchy for `ekc:Event` and `ekc:Agent`.
-//- Normalized naming conventions (camelCase for properties; PascalCase for classes).
-//- Improved ontology metadata: `owl:versionIRI`, `owl:versionInfo`, `dcterms:issued`.
+- Revised ontology documentation and release documentation for the EKC 2025 line.
+- Updated repository metadata and release preparation materials for GitHub and Zenodo.
+- Refined explanatory texts concerning ontology structure, documentation policy, and versioned release handling.
 
-//- Publication metadata updated (e.g., `owl:versionIRI`, `owl:versionInfo`, issuance date).
--->
-<!--
-### Deprecated
-- `ekc:hasPeriod` (use `ekc:hasTimeSpan` instead).
-- `ekc:Scholar` (use `ekc:Researcher` instead).
--->
-<!--
-### Removed
-- (none)
--->
-<!--
-### Fixed
-- Cardinality inconsistencies detected by SHACL validation.
-- Typos in rdfs:label / skos:definition (ko/en).
--->
-<!--
-### Security
-- (none)
--->
-### Compatibility
-- EKC 2022.α2507 대비 “스키마(클래스/오브젝트프로퍼티 집합) 변경”은 최소/없음.
-- (주의) 메타데이터 필드 기반으로 파이프라인을 구성한 경우,
-  versionIRI/issued/modified/license/publisher 반영에 맞춰 수집·인용 규칙만 업데이트 권장.
+### Versioning clarification
 
-### Migration Notes
-- SPARQL 패턴 자체는 대체로 영향이 없으나,
-  (1) ontology header 메타데이터를 이용한 필터링/검증을 하는 경우,
-  (2) 버전 IRI를 인용 키로 삼는 경우에는 본 릴리즈의 헤더를 기준으로 재정렬 필요.
-<!-- - See this Changelog entry and related docs for notes on upgrading from EKC 2022.α2507.--> 
-<!--
-- See `docs/migration-2022a2507-to-2025.md`.
-- Legacy terms remain resolvable for compatibility, but are not maintained.
--->
+`v2025.1.0` is maintained as the current release of the `ekc-2025` ontology line. Accordingly, `ekc_2025_1_0.ttl` retains the existing metadata structure:
+
+- `owl:versionIRI` → `http://dh.aks.ac.kr/ontologies/ekc-2025`
+- `dcterms:replaces` → `http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507`
+- `owl:priorVersion` → `http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507`
+
 ### Documentation 
-- **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (**continuously updated with incremental additions**) 
-<!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously expanded via incremental addenda)--> 
-<!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md`--> 
-<!-- - **Detailed dossier:** `docs/changes/v2025.0.0-ontology-revision.md` (continuously updated with incremental additions) --> 
-<!--//### References
-//- **Details:** docs/changes/v2025.0.0-ontology-revision.md
--->
+- **Detailed dossier:** `docs/changes/v2025.1.0-ontology-revision.md` (**continuously updated with incremental additions**) 
+
 ### Links
-- Release: [EKC 2025 [v2025.0.0] – Major Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0) 
-- Compare: [`v2022-alpha2507...v2025.0.0`](https://github.com/dongshins/EKC_ontology/compare/v2022-alpha2507...v2025.0.0)
+- Release: TBD (Release 생성 후 링크로 교체); [EKC 2025 [v2025.0.0] – Major Ontology Release](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0) 
+- Compare: TBD; [`v2025.0.0...v2025.1.0`](https://github.com/dongshins/EKC_ontology/compare/v2025.0.0...v2025.1.0)
 <!-- - Release: TBD (To Be Determined; 추후 결정. Release 생성 후 링크로 교체) --> 
 <!-- - Release: TBD (Release 생성 후 링크로 교체)--> 
 <!-- - Release: https://github.com/dongshins/EKC_ontology/releases/tag/v2025.0.0-->
