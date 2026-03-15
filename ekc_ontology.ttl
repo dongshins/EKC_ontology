@@ -5,10 +5,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://dh.aks.ac.kr/ontologies/ekc#> .
 
@@ -18,86 +20,144 @@
                                                  "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
                                                  "한국학중앙연구원 디지털인문학연구소"@ko ;
                                       dc:description "EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마이다.(Encyves ≒ Encyclopedic Archives) 한국학중앙연구원 디지털인문학연구소에서 2016년에 처음 제정하였고(EKC 1.0/2016, EKC 1.1/2017), 매년 유관 분야 연구를 통해 확장해 가고 있다."@ko ;
+                                      dc:publisher "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
+                                                   "한국학중앙연구원 디지털인문학연구소"@ko ;
                                       dc:title "EKC Data Model Vocabulary: Ontology Design for the Encyclopedic Archives of Korean Culture (ekc)"@en ,
                                                "EKC 데이터 모델: 한국문화 엔사이브 온톨로지"@ko ;
-                                      dcterms:contributor "김현, 서동신, 강혜원, 류인태, 서소리, 김지선, 김사현, 장동룡, 김바로, 김누리, 김미정, 이혜영, 차서연, 장원석, 이창섭, 김선미, 김현규, 최한샘, 김아람, 김병준, 김현종"@ko ;
-                                      dcterms:issued "2026-02-18T06:50:09+09:00"^^xsd:dateTime ;
+                                      dcterms:issued "2026-02-18T00:00:00+09:00"^^xsd:dateTime ;
                                       dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-                                      dcterms:modified "2026-02-18T06:50:09+09:00"^^xsd:dateTime ;
+                                      dcterms:modified "2026-03-13T00:00:00+09:00"^^xsd:dateTime ;
                                       dcterms:replaces <http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507> ;
                                       rdfs:comment "The EKC Ontology is a domain-specific vocabulary for modeling relationships among historical facts, source documents, persons, and locations in Korean cultural heritage. Initially developed during the Encyclopedic Archives of Korean Culture digitization project at the Academy of Korean Studies and refined through various digital humanities projects."@en ,
                                                    "The present specification is based on the document \\\"Ontology:EKC 2022\\\", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies." ;
                                       rdfs:seeAlso "https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022" ,
                                                    "https://github.com/dongshins/EKC_ontology" ,
                                                    "https://github.com/dongshins/EKC_ontology_advanced" ;
-                                      owl:priorVersion <https://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507> ;
-                                      owl:versionInfo "EKC 2025"@en .
+                                      owl:priorVersion <http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507> ;
+                                      owl:versionInfo "EKC 2025 [v2025.1.0]"@en ;
+                                      dcat:contactPoint <https://github.com/dongshins> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty ;
+               dc:description "기여자 정보를 텍스트성 내용(문자열) 또는 IRI로 기입함. 여타 개체를 대상으로 지정 시에는 'dcterms:contributor'(Object Property)를 사용하기로 함.(EKC 2025 방침)" ;
+               rdfs:label "contributor"@en ;
+               skos:note "기여자"@ko .
+
+
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty ;
+           dc:description "창작자 정보를 텍스트성 내용(문자열) 또는 IRI로 기입함. 여타 개체를 대상으로 지정 시에는 'dcterms:creator'(Object Property)를 사용하기로 함.(EKC 2025 방침)" ;
+           rdfs:label "creator"@en ;
+           skos:note "창작자(저자)로 인정받는 제작자"@ko ;
+           skos:scopeNote "Domain : Record/Object" .
 
 
 ###  http://purl.org/dc/elements/1.1/description
-dc:description rdf:type owl:AnnotationProperty .
+dc:description rdf:type owl:AnnotationProperty ;
+               dc:description "An account of the resource."@en ,
+                              "해당 자원에 대한 설명"@ko ,
+                              "An account of the resource.(해당 자원에 대한 설명)" ;
+               rdfs:label "description" .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty ;
+             dc:description "출판자 정보를 텍스트성 내용(문자열) 또는 IRI로 기입함. 여타 개체를 대상으로 지정 시에는 'dcterms:publisher'(Object Property)를 사용하기로 함.(EKC 2025 방침)" ;
+             rdfs:label "publisher"@en ;
+             skos:note "필사/간행/중간/영인"@ko .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/contributor
-dcterms:contributor rdf:type owl:AnnotationProperty ;
-                    rdfs:range :Actor .
+dc:title rdf:type owl:AnnotationProperty ;
+         dc:description "A name given to the resource."@en ,
+                        "해당 자원에 부여된 이름"@ko ,
+                        "A name given to the resource.(해당 자원에 부여된 이름)" ;
+         rdfs:label "title"@en .
 
 
 ###  http://purl.org/dc/terms/issued
 dcterms:issued rdf:type owl:AnnotationProperty ;
+               dc:description "Date of formal issuance of the resource."@en ,
+                              "해당 자원의 공식 발행일"@ko ,
+                              "Date of formal issuance of the resource.(해당 자원의 공식 발행일)" ;
+               rdfs:label "Date issued"@en ;
                rdfs:range xsd:dateTime .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty ;
+                dc:description "A legal document giving official permission to do something with the resource."@en ,
+                               "해당 자원을 가지고 어떤 일을 할 수 있도록 공식적인 허가를 부여하는 법적 문서"@ko ,
+                               "A legal document giving official permission to do something with the resource.(해당 자원을 가지고 어떤 일을 할 수 있도록 공식적인 허가를 부여하는 법적 문서)" ;
+                rdfs:label "license"@en .
 
 
 ###  http://purl.org/dc/terms/modified
 dcterms:modified rdf:type owl:AnnotationProperty ;
+                 dc:description "Date on which the resource was changed."@en ,
+                                "해당 자원이 변경된 날짜"@ko ,
+                                "Date on which the resource was changed.(해당 자원이 변경된 날짜)" ;
+                 rdfs:label "Date modified"@en ;
                  rdfs:range xsd:dateTime .
 
 
-###  http://purl.org/dc/terms/publisher
-dcterms:publisher rdf:type owl:AnnotationProperty ;
-                  rdfs:range :Actor .
-
-
 ###  http://purl.org/dc/terms/replaces
-dcterms:replaces rdf:type owl:AnnotationProperty .
+dcterms:replaces rdf:type owl:AnnotationProperty ;
+                 dc:description "A related resource that is supplanted, displaced, or superseded by the described resource."@en ,
+                                "설명된 자원으로 대체되거나, 밀려나거나, 교체된 관련 자원"@ko ,
+                                "A related resource that is supplanted, displaced, or superseded by the described resource.(설명된 자원으로 대체되거나, 밀려나거나, 교체된 관련 자원)" ;
+                 rdfs:label "replaces"@en .
 
 
 ###  http://www.w3.org/2002/07/owl#versionIRI
-owl:versionIRI rdf:type owl:AnnotationProperty .
+owl:versionIRI rdf:type owl:AnnotationProperty ;
+               dc:description "The version IRI of an ontology."@en ,
+                              "온톨로지의 버전 IRI"@ko ,
+                              "The version IRI of an ontology.(온톨로지의 버전 IRI)" ;
+               rdfs:label "versionIRI"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty ;
+                dc:description "Definition"@en ,
+                               "정의"@ko ,
+                               "Definition(정의)" ;
+                rdfs:label "definition"@en ;
                 rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
 skos:example rdf:type owl:AnnotationProperty ;
+             dc:description "Example"@en ,
+                            "예시"@ko ,
+                            "Example(예시)" ;
+             rdfs:label "example"@en ;
              rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#note
-skos:note rdf:type owl:AnnotationProperty .
+skos:note rdf:type owl:AnnotationProperty ;
+          dc:description "Note"@en ,
+                         "노트"@ko ,
+                         "Note(노트)" ;
+          rdfs:label "note"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty ;
+               dc:description "Scope note."@en ,
+                              "범위 노트"@ko ,
+                              "Scope note.(범위 노트)" ;
+               rdfs:label "scopeNote"@en ;
                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1067,14 +1127,16 @@ A는 B로 운반되었다""" .
 :isContributorOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :A2 ;
                  owl:inverseOf dcterms:contributor ;
-                 rdfs:label "isContributorOf"@en .
+                 rdfs:label "isContributorOf"@en ;
+                 skos:scopeNote "Range : Record/Object/Event" .
 
 
 ###  http://dh.aks.ac.kr/ontologies/ekc#isCreatorOf
 :isCreatorOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :A2 ;
              owl:inverseOf dcterms:creator ;
-             rdfs:label "isCreatorOf"@en .
+             rdfs:label "isCreatorOf"@en ;
+             skos:scopeNote "Range : Record/Object" .
 
 
 ###  http://dh.aks.ac.kr/ontologies/ekc#isCurrentLocationOf
@@ -1986,16 +2048,21 @@ A는 B로 운반되었다""" .
 
 ###  http://purl.org/dc/terms/contributor
 dcterms:contributor rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :A2 .
+                    rdfs:subPropertyOf :A2 ;
+                    rdfs:range :Actor ;
+                    dc:description "기여자는 ~이다 ※ Range로 개체를 지정해야 함. 대상으로 텍스트성 내용(문자열) 또는 IRI를 기입 시에는 'dc:contributor'(Annotation Property)를 사용하기로 함.(EKC 2025 방침)" ;
+                    rdfs:label "contributor"@en ;
+                    skos:example "장흥 보림사 - 신라 헌강왕"@ko ;
+                    skos:note "기여자"@ko ;
+                    skos:scopeNote "Domain : Record/Object/Event" .
 
 
 ###  http://purl.org/dc/terms/creator
 dcterms:creator rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :A2 ;
                 rdfs:range :Actor ;
-                dc:description "(문헌/작품의) 창작자는 ~이다"@ko ;
+                dc:description "창작자는 ~이다 ※ Range로 개체를 지정해야 함. 대상으로 텍스트성 내용(문자열) 또는 IRI를 기입 시에는 'dc:creator'(Annotation Property)를 사용하기로 함.(EKC 2025 방침)" ;
                 rdfs:label "creator"@en ;
-                skos:example "도산십이곡 - 이황"@ko ;
                 skos:note "창작자(저자)로 인정받는 제작자"@ko ;
                 skos:scopeNote "Domain : Record/Object" .
 
@@ -2041,7 +2108,12 @@ dcterms:provenance rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :A2 ;
-                  rdfs:domain :Record .
+                  rdfs:domain :Record ;
+                  rdfs:range :Actor ;
+                  dc:description "출판자는 ~이다 ※ Range로 개체를 지정해야 함. 대상으로 텍스트성 내용(문자열) 또는 IRI를 기입 시에는 'dc:publisher'(Annotation Property)를 사용하기로 함.(EKC 2025 방침)"@ko ;
+                  rdfs:label "publisher"@en ;
+                  skos:example "어제계주윤음 - 교서관"@ko ;
+                  skos:note "필사/간행/중간/영인"@ko .
 
 
 ###  http://purl.org/dc/terms/references
@@ -2172,10 +2244,46 @@ edm:isSuccessorOf rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/2002/07/owl#sameAs
 owl:sameAs rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :CO ;
-           dc:description "~와 같다"@ko ;
+           rdf:type owl:SymmetricProperty ,
+                    owl:TransitiveProperty ;
+           dc:description "두 URI가 동일한 개체(같은 resource/individual)를 가리킨다. 단순 유사성, 상호참조, 개념 대응에는 사용하지 않는다."@ko ;
            rdfs:label "sameAs"@en ;
-           skos:example "훈민정음 - 한글"@ko ;
-           skos:note "동일 또는 유사 관계"@ko .
+           skos:example "<http://dh.aks.ac.kr/iri/ekc#조선_영조> - <https://www.wikidata.org/entity/Q485009>"@ko ;
+           skos:note "엄격한 동일개체 관계"@ko ;
+           skos:scopeNote "엄격한 동일성이 확실할 때만 사용. 개념/용어의 대응에는 skos:exactMatch 또는 skos:closeMatch를 우선 검토할 것."@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:mappingRelation ;
+                rdf:type owl:SymmetricProperty ;
+                dc:description "~와 유사하다 ※ 다른 개념체계(어휘집)의 자원과 근접하게 대응한다. 일부 정보검색 맥락에서는 상호대체 가능하지만, 완전 동일개체를 뜻하지는 않는다."@ko ;
+                rdfs:label "closeMatch"@en ;
+                skos:example "개념 A(EKC) - 개념 B(외부 어휘) ※ 부분적 상호대체 가능"@ko ;
+                skos:note "유사한 관계(근접 대응)"@ko ;
+                skos:scopeNote "주로 Concept/Index 간의 외부 어휘 매핑에 사용. 엄격한 동일성이 아니므로 owl:sameAs 대용으로 사용하지 말 것."@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:closeMatch ;
+                rdf:type owl:SymmetricProperty ,
+                         owl:TransitiveProperty ;
+                dc:description "다른 개념체계(어휘집)의 자원과 정밀하게 대응한다. 넓은 정보검색 맥락에서 상호대체 가능하지만, OWL의 엄격한 동일성(owl:sameAs)과는 구별한다."@ko ;
+                rdfs:label "exactMatch"@en ;
+                skos:example "개념 A(EKC) - 개념 B(외부 어휘) ※ 광범위한 상호대체 가능"@ko ;
+                skos:note "정밀 대응 관계"@ko ;
+                skos:scopeNote "주로 Concept/Index 간의 외부 어휘 매핑에 사용. 완전 동일 개체가 확실할 때만 owl:sameAs를 사용."@ko .
+
+
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+skos:mappingRelation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :CO ;
+                     dc:description "상이한 개념체계(어휘집) 사이의 대응 관계를 묶는 상위 속성"@ko ;
+                     rdfs:label "mappingRelation"@en ;
+                     skos:example "개념 A(EKC) - 개념 B(외부 어휘)"@ko ;
+                     skos:note "외부 개념체계 매핑의 상위 관계"@ko ;
+                     skos:scopeNote "주로 Concept/Index 간의 외부 링크 정리에 사용"@ko .
 
 
 ###  http://xmlns.com/foaf/0.1/knows
@@ -2801,23 +2909,6 @@ voaf:Vocabulary rdf:type owl:Class .
 
 ###  https://dh.aks.ac.kr/
 <https://dh.aks.ac.kr/> rdf:type owl:NamedIndividual .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-dcterms:contributor dc:description "기여자는 ~이다"@ko ;
-                    rdfs:label "contributor"@en ;
-                    skos:example "장흥 보림사 - 신라 헌강왕"@ko ;
-                    skos:note "기여자"@ko ;
-                    skos:scopeNote "Domain : Record/Object/Event" .
-
-
-dcterms:publisher dc:description "출판자는 ~이다"@ko ;
-                  rdfs:label "publisher"@en ;
-                  skos:example "어제계주윤음 - 교서관"@ko ;
-                  skos:note "필사/간행/중간/영인"@ko .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
