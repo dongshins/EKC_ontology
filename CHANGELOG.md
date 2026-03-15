@@ -151,7 +151,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 ### Migration Notes
 - SPARQL 패턴 자체는 대체로 영향이 없으나,
   (1) ontology header 메타데이터를 이용한 필터링/검증을 하는 경우,
-  (2) 버전 IRI를 인용 키로 삼는 경우에는 본 릴리즈의 헤더를 기준으로 재정렬 필요.
+  (2) 버전 IRI를 인용하기로 할 경우에는 본 릴리즈의 헤더를 기준으로 재정렬 필요.
 <!-- - See this Changelog entry and related docs for notes on upgrading from EKC 2022.α2507.--> 
 <!--
 - See `docs/migration-2022a2507-to-2025.md`.
