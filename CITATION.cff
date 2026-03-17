@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite the archived release or the metadata
+  below. For the full contributor list and roles, see CONTRIBUTORS.md:
+  https://github.com/dongshins/EKC_ontology/blob/main/CONTRIBUTORS.md
+type: software
+title: "EKC Data Model Ontology"
+version: "v2025.1.0"
+date-released: 2026-03-13
+license: "CC-BY-SA-4.0"
+repository-code: "https://github.com/dongshins/EKC_ontology"
+url: "https://github.com/dongshins/EKC_ontology"
+abstract: >-
+  EKC Data Model Ontology is a domain-specific vocabulary for modeling entities
+  and relationships in Korean cultural heritage, especially historical facts,
+  source documents, persons, places, institutions, and related knowledge
+  structures. It has been developed at the Center for Digital Humanities, the
+  Academy of Korean Studies since 2016—initially for the digitization of the
+  Encyclopedic Archives of Korean Culture—and has been further refined through
+  subsequent digital humanities projects and researches at the Center.
+authors:
+  - name: "The Center for Digital Humanities at the Academy of Korean Studies"
+contact:
+  - given-names: "Dong Shin"
+    family-names: "SEO"
+    orcid: "https://orcid.org/0009-0007-4477-6547"
+keywords:
+  - "EKC"
+  - "Encyves"
+  - "엔사이브"
+  - "Encyclopedic Archives"
+  - "Encyclopedic Archives of Korean Culture"
+  - "Korean cultural heritage"
+  - "digital humanities"
+  - "ontology"
+  - "온톨로지"
+  - "semantic web"
+  - "시맨틱웹"
+  - "linked data"
+  - "linked open data"
+  - "OWL"
+  - "RDF"
+  - "Turtle"
+  - "knowledge graph"
+  - "지식그래프"
+  - "knowledge representation"
+  - "ontology engineering"
+  - "semantic modeling"
+  - "Korean studies"
+  - "AKS"
+  - "Academy of Korean Studies"
+  - "cultural heritage ontology"
+  - "heritage knowledge graph"
