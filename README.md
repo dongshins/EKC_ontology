@@ -11,9 +11,10 @@ It has been developed at [**the Center for Digital Humanities, the Academy of Ko
 - **Namespace:** `http://dh.aks.ac.kr/ontologies/ekc#`
 - **Prefix:** `ekc`
 - **Format:** Turtle (`.ttl`), OWL 2
-- **DOI:** 10.5281/zenodo.19059550 
+- **DOI (all versions):** 10.5281/zenodo.19059550 
 - **License:** CC BY-SA 4.0
 - **Current stable release:** [EKC 2025 [v2025.1.0]](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0)
+  * **Version DOI (v2025.1.0):** 10.5281/zenodo.19059551
 
 ## Overview
 
@@ -27,7 +28,8 @@ The present repository provides the ontology in OWL using Protégé and in Turtl
 
 - **Release page:** <https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0>
 - **Status:** Current stable release
-- [![DOI](https://zenodo.org/badge/885378489.svg)](https://doi.org/10.5281/zenodo.19059550)
+- **Version DOI (v2025.1.0):** 10.5281/zenodo.19059551 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19059551.svg)](https://doi.org/10.5281/zenodo.19059551)
+- **Concept DOI (all versions):** 10.5281/zenodo.19059550 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19059550.svg)](https://doi.org/10.5281/zenodo.19059550)
 
 ## Archived Versions
 - **Note:** Preserved for reproducibility, legacy dataset compatibility, and stable scholarly citation
