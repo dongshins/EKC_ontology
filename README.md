@@ -11,6 +11,7 @@ It has been developed at [**the Center for Digital Humanities, the Academy of Ko
 - **Namespace:** `http://dh.aks.ac.kr/ontologies/ekc#`
 - **Prefix:** `ekc`
 - **Format:** Turtle (`.ttl`), OWL 2
+- [![DOI](https://zenodo.org/badge/885378489.svg)](https://doi.org/10.5281/zenodo.19059550)
 - **License:** CC BY-SA 4.0
 - **Current stable release:** [EKC 2025 [v2025.1.0]](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0)
 
