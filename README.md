@@ -1,4 +1,4 @@
-# EKC Data Model Ontology
+# EKC Data Model Ontology in OWL/Turtle
 
 EKC Data Model Ontology is a domain-specific vocabulary for modeling entities and relationships in Korean cultural heritage, especially historical facts, source documents, persons, places, institutions, and related knowledge structures.
 
