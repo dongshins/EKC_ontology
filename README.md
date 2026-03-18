@@ -99,7 +99,7 @@ The EKC Ontology was initially developed through **collaborative work** at **the
 
 For the **full contributor list and roles**, see [**CONTRIBUTORS**.md](./CONTRIBUTORS.md).
 
-The OWL/Protégé-based version of the ontology in this repository, together with Turtle serialization and repository maintenance, has been composed and maintained by **Dong Shin SEO**.
+The OWL/Protégé-based version of the ontology in this repository, together with Turtle serialization and repository maintenance, has been composed and maintained by **Dong Shin SEO**(oriental.neo@gmail.com). 
 
 ## Related Notes
 
