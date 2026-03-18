@@ -17,7 +17,7 @@
 - Protégé를 활용한 전체 EKC 온톨로지의 W3C 웹표준 코드화
   * 2024년~현재(*Ontology:EKC 2022* 총괄 재검토, Turtle 코딩, 업그레이드, 글로벌 레지스트리 LOV 등록 및 유지관리): 서동신 
 <!--(서동신; Protégé를 활용한 전체 EKC 온톨로지의 W3C 웹표준 코드화, 업그레이드, 글로벌 레지스트리 등록 및 유지관리 수행 @ko)-->
-#### Contact Point 
+### Contact Point 
 - Dong Shin SEO (oriental.neo@gmail.com) 
 
 ### 명단 표기 순서(근거) 및 오차 가능성 안내 @ko
