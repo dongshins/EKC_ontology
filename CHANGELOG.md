@@ -244,7 +244,7 @@ and formalizes explicit ontology version metadata (e.g., `owl:versionIRI`) for r
 [: compare 링크(태그A...태그B) ] 
 --> 
 ### Documentation 
-- **Detailed dossier:** `docs/releases/v2022-alpha2507.md` (**continuously expanded via incremental addenda**) 
+- **Detailed dossier:** [`docs/releases/v2022-alpha2507.md`](https://github.com/dongshins/EKC_ontology/blob/main/docs/releases/v2022-alpha2507.md) (**continuously expanded via incremental addenda**) 
 <!-- - **Detailed dossier:** `docs/releases/v2022-alpha2507.md` (continuously expanded via incremental addenda) --> 
 
 ### References
