@@ -1,20 +1,24 @@
 # EKC Data Model Ontology in OWL/Turtle
 
-EKC Data Model Ontology is a domain-specific vocabulary for modeling entities and relationships in Korean cultural heritage, especially historical facts, source documents, persons, places, institutions, and related knowledge structures.
+EKC Data Model Ontology is a domain-specific vocabulary for modeling entities and relationships in Korean cultural heritage, especially historical facts, source documents, persons, places, institutions, and related knowledge structures. It has been developed at [**the Center for Digital Humanities, the Academy of Korean Studies (AKS)**](https://dh.aks.ac.kr/) since 2016, initially for the digitization of the *Encyclopedic Archives of Korean Culture*, and has been further refined through subsequent digital humanities projects and researches at the Center.
+**'EKC Data Model Ontology in OWL/Turtle'** builds on the earlier wiki-based *Ontology:EKC 2022* and rearticulates it as a citable OWL/Turtle ontology repository. The present release line further strengthens versioning, publication metadata, and semantic-web modeling policy so that the ontology can be maintained, cited, and reused in a more stable and standards-aware form.
+<!--It has been developed at [**the Center for Digital Humanities, the Academy of Korean Studies (AKS)**](https://dh.aks.ac.kr/) since 2016—initially for the digitization of the *Encyclopedic Archives of Korean Culture*—and has been further refined through subsequent digital humanities projects and researches at the Center.
+The present **'EKC Data Model Ontology in OWL/Turtle'** repository rearticulates and formalizes the earlier wiki-based *Ontology:EKC 2022* as an OWL/Protégé- and Turtle-based, citable ontology release, further refined for clearer versioning, publication metadata, and closer alignment with semantic-web standards and repository documentation practices.--> 
 
-It has been developed at [**the Center for Digital Humanities, the Academy of Korean Studies (AKS)**](https://dh.aks.ac.kr/) since 2016—initially for the digitization of the *Encyclopedic Archives of Korean Culture*—and has been further refined through subsequent digital humanities projects and researches at the Center.
-
-*EKC(Encyves of Korean Culture)* 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마입니다.(*Encyves* ≒ *Encyclopedic Archives*) [**한국학중앙연구원 디지털인문학연구소**](https://dh.aks.ac.kr/)에서 2016년에 처음 제정하였고([EKC 1.0/2016, EKC 1.1/2027](http://dh.aks.ac.kr/Encyves/wiki/index.php/EKC_Data_Model-Draft_1.1)), 매년 유관 분야 연구를 통해 확장해 가고 있습니다. @ko
+*EKC(Encyves of Korean Culture) 데이터 모델 온톨로지*는 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마입니다.(*Encyves* ≒ *Encyclopedic Archives*) 이 모델은 [**한국학중앙연구원 디지털인문학연구소**](https://dh.aks.ac.kr/)에서 2016년에 처음 제정하였고([EKC 1.0/2016, EKC 1.1/2027](http://dh.aks.ac.kr/Encyves/wiki/index.php/EKC_Data_Model-Draft_1.1)), 매년 유관 분야 연구를 통해 확장해 가고 있습니다. 
+**'EKC Data Model Ontology in OWL/Turtle'** 저장소는 기존의 위키 기반 *Ontology:EKC 2022*를 OWL/Protégé 및 Turtle 기반의 인용 가능한 온톨로지 릴리즈로 정식화한 것이며, 버전 관리, 출판 메타데이터, 시맨틱웹 표준 적합성, 저장소 문서화 측면에서 추가적인 개선을 반영합니다.
 
 ## Quick Facts
 
 - **Namespace:** `http://dh.aks.ac.kr/ontologies/ekc#`
 - **Prefix:** `ekc`
 - **Format:** Turtle (`.ttl`), OWL 2
-- **DOI (all versions):** 10.5281/zenodo.19059550 
 - **License:** CC BY-SA 4.0
+- *Concept* **DOI (all versions):** `10.5281/zenodo.19059550`
 - **Current stable release:** [EKC 2025 [v2025.1.0]](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.0)
-  * **Version DOI (v2025.1.0):** 10.5281/zenodo.19059551
+- *Version* **DOI (v2025.1.0):** `10.5281/zenodo.19059551`
+<!-- - **DOI (all versions):** 10.5281/zenodo.19059550 -->
+<!--  * **Version DOI (v2025.1.0):** 10.5281/zenodo.19059551 -->
 
 ## Overview
 
