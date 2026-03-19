@@ -10,8 +10,10 @@
 - 아래 사항들에 대한 기본 구상과 골격의 제시, 지도, 확정: 김현 교수님
 - 관계어(relation, object property)
   * 외부 스키마(vocabulary)의 참조 대상 확인 및 후보 추천: 강혜원, 서동신 위주
-  * 활용된 외부 스키마 : owl, dcterms, edm, foaf 
-	※ CIDOC-CRM 및 CBDB의 경우, 관련 표현을 참고하되 표현형식의 차이 때문에 접두어는 'ekc:'를 사용하기로 결정 
+  * 활용된 외부 스키마
+    - 2016~2017년: owl, dc, dcterms, edm, foaf  ※ CIDOC-CRM 및 CBDB의 경우, 관련 표현을 참고하되 표현형식의 차이 때문에 접두어는 'ekc:'를 사용하기로 결정
+    - 2024년 이후 추가(in Turtle format): rdf, rdfs, xml, xsd, dcat, skos, voaf, vcard 
+    
 - 클래스 구성
   * 2016~2017년 수행 ‘한국 기록유산의 디지털 스토리텔링 자원 개발’ 연구과제의 4개 팀 중 10여 명의 의견 개진･취합
 - [*Ontology:EKC 2022*](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022) 스키마의 레이아웃 도출 및 집성 
