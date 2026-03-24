@@ -6,7 +6,7 @@ EKC Data Model Ontology is a domain-specific vocabulary for modeling entities an
 The present **'EKC Data Model Ontology in OWL/Turtle'** repository rearticulates and formalizes the earlier wiki-based *Ontology:EKC 2022* as an OWL/Protégé- and Turtle-based, citable ontology release, further refined for clearer versioning, publication metadata, and closer alignment with semantic-web standards and repository documentation practices.--> 
 
 *EKC(Encyves of Korean Culture) 데이터 모델 온톨로지*는 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마입니다.(*Encyves* ≒ *Encyclopedic Archives*) 이 모델은 [**한국학중앙연구원 디지털인문학연구소**](https://dh.aks.ac.kr/)에서 2016년에 처음 제정하였고([EKC 1.0/2016, EKC 1.1/2027](http://dh.aks.ac.kr/Encyves/wiki/index.php/EKC_Data_Model-Draft_1.1)), 매년 유관 분야 연구를 통해 확장해 가고 있습니다. 
-"[**EKC Data Model Ontology in OWL/Turtle**](https://doi.org/10.5281/zenodo.19059550)" 저장소는 기존의 위키 기반 [*Ontology:EKC 2022*](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022)를 OWL/Protégé 및 Turtle 기반의 인용 가능한 온톨로지 릴리즈로 정식화한 것이며, 버전 관리, 출판 메타데이터, 시맨틱웹 표준 적합성, 저장소 문서화 측면에서 추가적인 개선을 반영합니다.
+"[**EKC Data Model Ontology in OWL/Turtle**](https://doi.org/10.5281/zenodo.19059550)" 저장소는 기존의 위키 기반 [*Ontology:EKC 2022*](https://dh.aks.ac.kr/~hanyang2/wiki/index.php/Ontology:EKC_2022)를 OWL/Protégé 및 Turtle 기반의 인용 가능한 온톨로지 릴리즈로 정식화한 것이며, 버전 관리, 출판 메타데이터, 시맨틱웹 표준 적합성, 저장소 문서화 측면에서 추가적인 개선을 반영합니다. @ko 
 
 ## Quick Facts
 
