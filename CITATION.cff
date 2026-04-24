@@ -5,8 +5,8 @@ message: >-
   https://github.com/dongshins/EKC_ontology/blob/main/CONTRIBUTORS.md
 type: software
 title: "EKC Data Model Ontology"
-version: "v2025.1.0"
-date-released: 2026-03-13
+version: "v2025.1.17"
+date-released: 2026-04-24
 license: "CC-BY-SA-4.0"
 repository-code: "https://github.com/dongshins/EKC_ontology"
 url: "https://github.com/dongshins/EKC_ontology"
@@ -51,7 +51,6 @@ keywords:
   - "Academy of Korean Studies"
   - "cultural heritage ontology"
   - "heritage knowledge graph"
-doi: "10.5281/zenodo.19059551"
 message: >-
   If you use this repository, please cite the exact archived release when
   reproducibility matters. Current stable release DOI: 10.5281/zenodo.19059551.
