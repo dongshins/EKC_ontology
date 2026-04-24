@@ -18,7 +18,7 @@ The present release line strengthens versioning, publication metadata, and repos
 - **License:** CC BY-SA 4.0
 - *Concept* **DOI (all versions):** `10.5281/zenodo.19059550`
 - **Current stable release:** [EKC 2025 [v2025.1.17]](https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.17)
-- *Version* **DOI (v2025.1.17):** `TBD at release`
+- *Version* **DOI (v2025.1.17):** `10.5281/zenodo.19737358`
 
 ## Overview
 
@@ -32,7 +32,7 @@ It is intended for ontology-based knowledge organization, linked data production
 
 - **Release page:** <https://github.com/dongshins/EKC_ontology/releases/tag/v2025.1.17>
 - **Status:** Current stable release
-- *Version* **DOI (v2025.1.17):** `TBD at release`
+- *Version* **DOI (v2025.1.17):** `10.5281/zenodo.19737358` [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19737358.svg)](https://doi.org/10.5281/zenodo.19737358)
 - *Concept* **DOI (all versions):** `10.5281/zenodo.19059550` [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19059550.svg)](https://doi.org/10.5281/zenodo.19059550)
 
 ## Archived Versions
