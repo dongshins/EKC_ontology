@@ -1,6 +1,6 @@
 {
   "title": "EKC Data Model Ontology",
-  "description": "EKC Data Model Ontology is a domain-specific vocabulary for modeling entities and relationships in Korean cultural heritage, especially historical facts, source documents, persons, places, institutions, and related knowledge structures. It has been developed at the Center for Digital Humanities, the Academy of Korean Studies since 2016—initially for the digitization of the Encyclopedic Archives of Korean Culture—and has been further refined through subsequent digital humanities projects and researches at the Center. This repository provides the ontology in OWL/Protégé and Turtle for publication, maintenance, citation, and reuse. Current stable release: EKC 2025 [v2025.1.0].",
+  "description": "EKC Data Model Ontology is a domain-specific vocabulary for modeling entities and relationships in Korean cultural heritage, especially historical facts, source documents, persons, places, institutions, and related knowledge structures. It has been developed at the Center for Digital Humanities, the Academy of Korean Studies since 2016—initially for the digitization of the Encyclopedic Archives of Korean Culture—and has been further refined through subsequent digital humanities projects and researches at the Center. This repository provides the ontology in OWL/Protégé and Turtle for publication, maintenance, citation, and reuse. Current stable release: EKC 2025 [v2025.1.17].",
   "creators": [
     {
       "name": "The Center for Digital Humanities at the Academy of Korean Studies",
@@ -151,5 +151,5 @@
   "license": "cc-by-sa-4.0",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v2025.1.0"
+  "version": "v2025.1.17"
 }
