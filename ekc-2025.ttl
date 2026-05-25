@@ -1,4 +1,4 @@
-@prefix : <http://dh.aks.ac.kr/ontologies/ekc#> .
+﻿@prefix : <http://dh.aks.ac.kr/ontologies/ekc#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix ekc: <http://dh.aks.ac.kr/ontologies/ekc#> .
@@ -20,6 +20,7 @@
                                       dc:creator <https://dh.aks.ac.kr/> ,
                                                  "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
                                                  "한국학중앙연구원 디지털인문학연구소"@ko ;
+                                       dc:contributor <https://github.com/dongshins/EKC_ontology/blob/main/CONTRIBUTORS.md> ;
                                       dc:description "EKC(Encyves of Korean Culture) 데이터 모델은 한국의 전통문화 속의 역사적 사실 관계 및 그 사실의 문헌적 근거에 관한 지식을 데이터화 하기 위해 개발한 온톨로지 스키마이다.(Encyves ≒ Encyclopedic Archives) 한국학중앙연구원 디지털인문학연구소에서 2016년에 처음 제정하였고(EKC 1.0/2016, EKC 1.1/2017), 매년 유관 분야 연구를 통해 확장해 가고 있다."@ko ;
                                       dc:publisher "The Center for Digital Humanities at the Academy of Korean Studies"@en ,
                                                    "한국학중앙연구원 디지털인문학연구소"@ko ;
@@ -27,7 +28,7 @@
                                                "EKC 데이터 모델: 한국문화 엔사이브 온톨로지"@ko ;
                                       dcterms:issued "2026-02-18"^^xsd:date ;
                                       dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-                                      dcterms:modified "2026-04-15"^^xsd:date ;
+                                      dcterms:modified "2026-05-25"^^xsd:date ;
                                       dcterms:replaces <http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507> ;
                                       rdfs:comment "The EKC Ontology is a domain-specific vocabulary for modeling relationships among historical facts, source documents, persons, and locations in Korean cultural heritage. Initially developed during the Encyclopedic Archives of Korean Culture digitization project at the Academy of Korean Studies and refined through various digital humanities projects."@en ,
                                                    "The present specification is based on the document \\\"Ontology:EKC 2022\\\", originally led by Hyeon Kim in the Center for Digital Humanities at the Academy of Korean Studies." ;
@@ -35,7 +36,7 @@
                                                    "https://github.com/dongshins/EKC_ontology" ,
                                                    "https://github.com/dongshins/EKC_ontology_advanced" ;
                                       owl:priorVersion <http://dh.aks.ac.kr/ontologies/ekc-2022-alpha2507> ;
-                                      owl:versionInfo "EKC 2025 [v2025.1.17]"@en ;
+                                      owl:versionInfo "EKC 2025 [v2025.1.18]"@en ;
                                       dcat:contactPoint <https://github.com/dongshins> .
 
 #################################################################
