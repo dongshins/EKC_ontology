@@ -4,7 +4,7 @@
 - **Other**: 김현종, 김병준 
 
 ### Contact Person 
-- Dong Shin SEO (oriental.neo@gmail.com) 
+- Dong Shin SEO (oriental.neo@gmail.com, 서동신 @ko) 
 
 ### 기여 내역 개관 @ko
 - 아래 사항들에 대한 기본 구상과 골격의 제시, 지도, 확정: 김현 교수님
